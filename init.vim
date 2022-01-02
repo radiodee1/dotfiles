@@ -59,6 +59,7 @@ colorscheme dracula
 
 :helptags ~/.vim/pack/dist/start/vim-airline-themes/doc
 
+let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='badwolf'
 
 let g:markdown_fenced_languages = [

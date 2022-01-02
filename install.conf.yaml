@@ -6,11 +6,13 @@
 
 - create:
     - ~/.config/nvim
+    - ~/.vim/autoload
 
 - link:
     ~/.vimrc: vimrc
     ~/.config/nvim/init.vim: init.vim
     ~/.bashrc: bashrc
+    ~/.vim/autoload/plug.vim: plug.vim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
