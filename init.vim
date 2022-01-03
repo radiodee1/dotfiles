@@ -45,6 +45,8 @@ call plug#begin("~/.vim/plugged")
  Plug 'nvim-telescope/telescope.nvim' 
 
  Plug 'prettier/vim-prettier', { 'do': 'npm install ' }
+ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
 
 
  call plug#end()
