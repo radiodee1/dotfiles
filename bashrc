@@ -126,3 +126,5 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/bin/awesome-sr-7c31d97e029b.json
 
 figlet "dave ..."
 
+
+
