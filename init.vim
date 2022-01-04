@@ -46,7 +46,7 @@ call plug#begin("~/.vim/plugged")
 
  Plug 'prettier/vim-prettier', { 'do': 'npm install ' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-
+ Plug 'ryanoasis/vim-devicons'
 
 
  call plug#end()
@@ -86,6 +86,8 @@ inoremap ' ''<Esc>ha
 inoremap ` ``<Esc>ha
 
 set number
+
+set relativenumber
 
 set hidden
 
@@ -141,6 +143,7 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
   let NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+  let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""
 "" Telescope
 """"""""""""""""""""""""""""""""""""""""""
