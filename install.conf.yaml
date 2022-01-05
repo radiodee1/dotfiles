@@ -7,12 +7,14 @@
 - create:
     - ~/.config/nvim
     - ~/.vim/autoload
+    - ~/.config/nvim/lua
 
 - link:
     ~/.vimrc: vimrc
     ~/.config/nvim/init.vim: init.vim
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
+    ~/.config/nvim/lua/keymap.lua : keymap.lua
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
