@@ -99,9 +99,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 inoremap { {}<Esc>ha
 inoremap ( ()<Esc>ha
 inoremap [ []<Esc>ha
-inoremap " ""<Esc>ha
-inoremap ' ''<Esc>ha
-inoremap ` ``<Esc>ha
+" inoremap " ""<Esc>ha
+" inoremap ' ''<Esc>ha
+" inoremap ` ``<Esc>ha
 
 set number
 
