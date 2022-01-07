@@ -124,5 +124,8 @@ source ~/bin/bashrc.api_key.sh
 
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/bin/awesome-sr-7c31d97e029b.json
 
-figlet "D. Liebman"
+#figlet "D. Liebman"
+
+cat ~/.figlet.txt
+
 

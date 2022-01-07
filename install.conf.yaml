@@ -15,6 +15,7 @@
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
     ~/.config/nvim/lua/keymap.lua : keymap.lua
+    ~/.figlet.txt: figlet.txt
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
