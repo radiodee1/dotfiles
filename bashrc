@@ -120,12 +120,15 @@ export PATH=/usr/local/lib/nodejs/node-v14.18.0-linux-x64/bin/:$PATH;
 
 export PATH=~/.local/bin/:$PATH;
 
-source ~/bin/bashrc.api_key.sh
+if [ -f ~/bin/bashrc.api_key.sh ]; then
+  source ~/bin/bashrc.api_key.sh
+fi
 
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/bin/awesome-sr-7c31d97e029b.json
 
 #figlet "D. Liebman"
-
-cat ~/.figlet.txt
+if [ -f ~/.figlet.txt ]; then
+  cat ~/.figlet.txt
+fi
 
 
