@@ -24,20 +24,29 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 "
 
-"call plug#begin("~/.config/nvim")
+set encoding=UTF-8
+set guifont=DroidSansMono\ Nerd\ Font\ 10
+" search google for 'Droid Sans Mono Nerd Font'
 
 call plug#begin("~/.vim/plugged")
  " Plugin Section
- Plug 'dracula/vim'
- Plug 'ryanoasis/vim-devicons'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+
+ " Plug 'dracula/vim', { 'as': 'dracula' }
+ Plug 'Mofiqul/dracula.nvim'
+
+
+ " Plug 'dracula/vim'
+ " Plug 'ryanoasis/vim-devicons'
  Plug 'SirVer/ultisnips'
  Plug 'honza/vim-snippets'
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'preservim/nerdtree'
- Plug 'vim-airline/vim-airline'
- Plug 'vim-airline/vim-airline-themes'
+ " Plug 'vim-airline/vim-airline'
+ " Plug 'vim-airline/vim-airline-themes'
 
 " Plug 'nvim-lua/popup.nvim'
 
@@ -46,7 +55,7 @@ call plug#begin("~/.vim/plugged")
 
  Plug 'prettier/vim-prettier', { 'do': 'npm install ' }
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
- Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 
@@ -66,20 +75,28 @@ call plug#begin("~/.vim/plugged")
 " For vsnip users.
  Plug 'hrsh7th/cmp-vsnip'
  Plug 'hrsh7th/vim-vsnip'
+ Plug 'ryanoasis/vim-devicons'
+
+" Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'yamatsum/nvim-nonicons'
 
  call plug#end()
 
 
 set laststatus=2
 
-packadd! dracula
+"packadd! dracula
 syntax enable
 colorscheme dracula
 
-:helptags ~/.vim/pack/dist/start/vim-airline-themes/doc
+" set encoding=UTF-8
+
+
+" :helptags ~/.vim/pack/dist/start/vim-airline-themes/doc
 
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='badwolf'
+let g:airline_theme='dracula' " 'badwolf'
+let g:airline_powerline_fonts = 1 
 
 let g:markdown_fenced_languages = [
       \ 'vim',
@@ -123,8 +140,8 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#fnamemod = ':t'
   let g:airline#extensions#tabline#show_tab_nr = 1
-  let g:airline_powerline_fonts = 1
-  let g:airline_theme='oceanicnext'
+"  let g:airline_powerline_fonts = 1
+  let g:airline_theme='dracula' " 'oceanicnext'
 " make sure to escape the spaces in the name properly
   set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ Mono:h11
 " Tabline part of vim-airline
@@ -150,7 +167,7 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
   let NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-  let g:airline_powerline_fonts = 1
+"  let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""
 "" Telescope
 """"""""""""""""""""""""""""""""""""""""""
