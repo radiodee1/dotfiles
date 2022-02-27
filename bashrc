@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color|xterm-kitty) color_prompt=yes;;
+    xterm-color|*-256color|xterm-kitty|alacritty) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -116,9 +116,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/lib/nodejs/node-v14.18.0-linux-x64/bin/:$PATH;
+export PATH=/usr/local/lib/nodejs/node-v14.17.5-linux-x64/bin:$PATH
 
-export PATH=~/.local/bin/:$PATH;
+export VDPAU_DRIVER=va_gl
+
+export PATH=$HOME/.local/bin:$PATH
+
+
 
 if [ -f ~/bin/bashrc.api_key.sh ]; then
   source ~/bin/bashrc.api_key.sh
@@ -131,4 +135,6 @@ if [ -f ~/.figlet.txt ]; then
   cat ~/.figlet.txt
 fi
 
-
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+source /usr/share/powerline/bindings/bash/powerline.sh
+fi 
