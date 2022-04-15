@@ -165,6 +165,7 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
   nmap <leader>8 <Plug>AirlineSelectTab8
   nmap <leader>9 <Plug>AirlineSelectTab9
 
+
   let NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 "  let g:airline_powerline_fonts = 1
