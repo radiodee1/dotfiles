@@ -37,6 +37,12 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-Right>", ":bnext<CR>", opts)
 keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 
+keymap("i", "<S-Right>", "<Esc>:bprevious<CR>i", opts)
+keymap("i", "<S-Left>",  "<Esc>:bnext<CR>i", opts)
+
+-- inoremap <C>, <Esc>:bprevious<CR>i
+-- inoremap <C>. <Esc>:bnext<CR>i
+ 
 keymap("n", "<C-tab>", ":bnext<CR>", opts)
 keymap("n", "<C-S-tab>", ":bprevious<CR>", opts)
 
