@@ -120,11 +120,11 @@ inoremap [ []<Esc>ha
 " inoremap ' ''<Esc>ha
 " inoremap ` ``<Esc>ha
 
-nnoremap <C>, :bprevious<CR>
-nnoremap <C>. :bnext<CR>
+ " nnoremap <C>, :bprevious<CR>
+ " nnoremap <C>. :bnext<CR>
  " nnoremap <C-t>     :tabnew<CR>
-inoremap <C>, <Esc>:bprevious<CR>i
-inoremap <C>. <Esc>:bnext<CR>i
+ " inoremap <C>, <Esc>:bprevious<CR>i
+ " inoremap <C>. <Esc>:bnext<CR>i
  " inoremap <C-t>     <Esc>:tabnew<CR>
 
 set number
