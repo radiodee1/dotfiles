@@ -24,7 +24,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 "
 " filetype on 
-
+ 
 
 set encoding=UTF-8
 set guifont=DroidSansMono\ Nerd\ Font\ 10

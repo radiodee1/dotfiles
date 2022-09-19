@@ -8,6 +8,7 @@
     - ~/.config/nvim
     - ~/.vim/autoload
     - ~/.config/nvim/lua
+    - ~/.config/nvim/ftdetect 
 
 - link:
     ~/.vimrc: vimrc
@@ -17,6 +18,7 @@
     ~/.config/nvim/lua/keymap.lua : keymap.lua
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
+    ~/.config/nvim/ftdetect/txt.vim: txt.vim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
