@@ -23,6 +23,8 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 "
+" filetype on 
+
 
 set encoding=UTF-8
 set guifont=DroidSansMono\ Nerd\ Font\ 10
@@ -77,6 +79,7 @@ call plug#begin("~/.vim/plugged")
  Plug 'hrsh7th/vim-vsnip'
  Plug 'ryanoasis/vim-devicons'
 
+ Plug 'junegunn/goyo.vim'
 " Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'yamatsum/nvim-nonicons'
 
