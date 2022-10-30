@@ -1,78 +1,9 @@
-set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
-set ignorecase              " case insensitive 
-set mouse=v                 " middle-click paste with 
-set hlsearch                " highlight search 
-set incsearch               " incremental search
-set tabstop=4               " number of columns occupied by a tab 
-set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
-set expandtab               " converts tabs to white space
-set shiftwidth=4            " width for autoindents
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-set cc=80                  " set an 80 column border for good coding style
-filetype plugin indent on   "allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
-set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
-filetype plugin on
-set cursorline              " highlight current cursorline
-set ttyfast                 " Speed up scrolling in Vim
-" set spell                 " enable spell check (may need to download language package)
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
-"
-" filetype on 
- 
+set number
 
-set encoding=UTF-8
-set guifont=DroidSansMono\ Nerd\ Font\ 10
-" search google for 'Droid Sans Mono Nerd Font'
+set hidden 
 
 call plug#begin("~/.vim/plugged")
- " Plugin Section
- Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
- " Plug 'dracula/vim', { 'as': 'dracula' }
- Plug 'Mofiqul/dracula.nvim'
-
-
- " Plug 'dracula/vim'
- " Plug 'ryanoasis/vim-devicons'
- Plug 'SirVer/ultisnips'
- Plug 'honza/vim-snippets'
- Plug 'preservim/nerdtree'
- Plug 'preservim/nerdcommenter'
- Plug 'mhinz/vim-startify'
- Plug 'preservim/nerdtree'
- " Plug 'vim-airline/vim-airline'
- " Plug 'vim-airline/vim-airline-themes'
-
-" Plug 'nvim-lua/popup.nvim'
-
- Plug 'nvim-lua/plenary.nvim'
- Plug 'nvim-telescope/telescope.nvim' 
-
- Plug 'prettier/vim-prettier', { 'do': 'npm install ' }
- Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-" Plug 'ryanoasis/vim-devicons'
-
- Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
-
- " completion
-
-" Plug 'neovim/nvim-lspconfig'
- "Plug 'hrsh7th/cmp-nvim-lsp'
- "Plug 'hrsh7th/cmp-buffer'
- "Plug 'hrsh7th/cmp-path'
- "Plug 'hrsh7th/cmp-cmdline'
- "Plug 'hrsh7th/nvim-cmp'
- Plug 'williamboman/nvim-lsp-installer'
-
- " new plugins here
-
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -80,134 +11,76 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
-" end new plugin
-Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*'}
- " Plug 'L3MON4D3/LuaSnip'
- " Plug 'rafamadriz/friendly-snippets'
- Plug 'neovim/nvim-lspconfig' 
 " For vsnip users.
- Plug 'hrsh7th/cmp-vsnip'
- Plug 'hrsh7th/vim-vsnip'
-" Plug 'ryanoasis/vim-devicons'
+"Plug 'hrsh7th/cmp-vsnip'
+"Plug 'hrsh7th/vim-vsnip'
 
- Plug 'junegunn/goyo.vim'
-" Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'yamatsum/nvim-nonicons'
+" For luasnip users.
+ Plug 'L3MON4D3/LuaSnip'
+ Plug 'saadparwaiz1/cmp_luasnip'
 
-Plug 'dracula/vim'
- Plug 'ryanoasis/vim-devicons'
- Plug 'SirVer/ultisnips'
- Plug 'honza/vim-snippets'
- Plug 'scrooloose/nerdtree'
- Plug 'preservim/nerdcommenter'
- Plug 'mhinz/vim-startify'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" For ultisnips users.
+" Plug 'SirVer/ultisnips'
+" Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
- call plug#end()
+" For snippy users.
+" Plug 'dcampos/nvim-snippy'
+" Plug 'dcampos/cmp-snippy'
 
+" Plug 'Mofiqul/dracula.nvim' " first dracula
+Plug 'dracula/vim', { 'as': 'dracula' } " better dracula
 
-set laststatus=2
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
 
-"packadd! dracula
-syntax enable
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+
+" start coc stuff here - auto complete js and python
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " this is for auto complete, prettier and tslinting 
+
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
+
+Plug 'jiangmiao/auto-pairs' "this will auto close ( [ {
+
+" these two plugins will add highlighting and indenting to JSX and TSX files.
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
+call plug#end()
+
 colorscheme dracula
 
-" set encoding=UTF-8
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" :helptags ~/.vim/pack/dist/start/vim-airline-themes/doc
+set mouse=a 
+
+let g:NERDTreeMouseMode = 2 
+let g:airline_powerline_fonts = 1 
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='dracula' " 'badwolf'
 let g:airline_powerline_fonts = 1 
 
-let g:markdown_fenced_languages = [
-      \ 'vim',
-      \ 'help'
-      \]
-
-" Start NERDTree 
-autocmd VimEnter * NERDTree | wincmd p
-" Navigation issues
-
-autocmd Filetype javascript setlocal tabstop=2 | set cindent | set shiftwidth=2 | set expandtab | set softtabstop=2 | set smarttab 
-autocmd Filetype python setlocal tabstop=4 | set shiftwidth=4 | set expandtab | set softtabstop=4 | set smarttab 
-
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-inoremap { {}<Esc>ha
-inoremap ( ()<Esc>ha
-inoremap [ []<Esc>ha
-" inoremap " ""<Esc>ha
-" inoremap ' ''<Esc>ha
-" inoremap ` ``<Esc>ha
-
- " nnoremap <C>, :bprevious<CR>
- " nnoremap <C>. :bnext<CR>
- " nnoremap <C-t>     :tabnew<CR>
- " inoremap <C>, <Esc>:bprevious<CR>i
- " inoremap <C>. <Esc>:bnext<CR>i
- " inoremap <C-t>     <Esc>:tabnew<CR>
-
-set number
-
-set relativenumber
-
-set hidden
-
-let mapleader = " " " map leader to Space
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+""""""""""""""""""""""""""""""""""""""""
+"" keymaps
+""""""""""""""""""""""""""""""""""""""""
 
 
-" TO INSTALL VIM-PLUG
-
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#fnamemod = ':t'
-  let g:airline#extensions#tabline#show_tab_nr = 1
-"  let g:airline_powerline_fonts = 1
-  let g:airline_theme='dracula' " 'oceanicnext'
-" make sure to escape the spaces in the name properly
-  set guifont=Sauce\ Code\ Powerline\ Plus\ Nerd\ File\ Types\ Mono:h11
-" Tabline part of vim-airline
-" Close the current buffer and move to the previous one
-" This replicates the idea of closing a tab
-  nmap <leader>x :bp <BAR> bd #<CR>
-" This replaes :tabnew which I used to bind to this mapping
-  nmap <leader>n :enew<cr>
-" Move to the next buffer
-"  nmap <leader>, :bnext<CR>
-" Move to the previous buffer
-"  nmap <leader>. :bprevious<CR>
-  let g:airline#extensions#tabline#buffer_idx_mode = 1
-  nmap <leader>1 <Plug>AirlineSelectTab1
-  nmap <leader>2 <Plug>AirlineSelectTab2
-  nmap <leader>3 <Plug>AirlineSelectTab3
-  nmap <leader>4 <Plug>AirlineSelectTab4
-  nmap <leader>5 <Plug>AirlineSelectTab5
-  nmap <leader>6 <Plug>AirlineSelectTab6
-  nmap <leader>7 <Plug>AirlineSelectTab7
-  nmap <leader>8 <Plug>AirlineSelectTab8
-  nmap <leader>9 <Plug>AirlineSelectTab9
-
-
-  let NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-"  let g:airline_powerline_fonts = 1
-""""""""""""""""""""""""""""""""""""""""""
-"" Telescope
-""""""""""""""""""""""""""""""""""""""""""
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+lua <<EOF
+ require "keymap"
+EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "" cmp
@@ -217,7 +90,10 @@ set completeopt=menu,menuone,noselect
 lua <<EOF
   
 -- Setup nvim-cmp.
-
+local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
 
 local present, cmp = pcall(require, "cmp")
 
@@ -310,6 +186,10 @@ local options = {
     mapping = {
         ["<A-k>"] = cmp.mapping.select_prev_item(),
         ["<A-j>"] = cmp.mapping.select_next_item(),
+        
+        ["<Up>"] = cmp.mapping.select_prev_item(),
+        ["<Down>"] = cmp.mapping.select_next_item(),
+
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
@@ -355,51 +235,8 @@ local options = {
 cmp.setup(options)
 EOF
 
-""""""""""""""""""""""""""""""""""""""""
-"" keymaps
-""""""""""""""""""""""""""""""""""""""""
 
+" TO INSTALL VIM-PLUG
 
-lua <<EOF
- require "keymap"
-EOF
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-""""""""""""""""""""""""""""""""""""""""
-"" nvim-treesitter
-""""""""""""""""""""""""""""""""""""""""
-
-lua <<EOF
-
-local configs = require'nvim-treesitter.configs'
-configs.setup {
-ensure_installed = "maintained", -- Only use parsers that are maintained
-highlight = { -- enable highlighting
-  enable = true, 
-},
-indent = {
-  enable = false, -- default is disabled anyways
-}
-i}
-
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-
-
-EOF
-
-""""""""""""""""""""""""""""""""""
-"" lsp
-""""""""""""""""""""""""""""""""""
-
-lua <<EOF
-local lsp_installer = require("nvim-lsp-installer")
-lsp_installer.on_server_ready(function(server)
-  local opts = {}
-  server:setup(opts)
-end)
-
-EOF
-
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
