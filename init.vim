@@ -103,3 +103,6 @@ endfunction
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+" INSTALL python coc support
+" :CocInstall coc-pyright 
+" :CocInstall coc-tsserver
