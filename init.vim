@@ -11,36 +11,62 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
+" For vsnip users.
+" Plug 'hrsh7th/cmp-vsnip'
+" Plug 'hrsh7th/vim-vsnip'
+Plug 'williamboman/nvim-lsp-installer'
 
-" For luasnip users. -- me!!
-" Plug 'L3MON4D3/LuaSnip'
-" Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'ray-x/lsp_signature.nvim'
 
-" Plug 'Mofiqul/dracula.nvim' " first dracula
 Plug 'dracula/vim', { 'as': 'dracula' } " better dracula
+Plug 'tanvirtin/monokai.nvim'
 
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'neovim/nvim-lspconfig'
+"Plug 'williamboman/nvim-lsp-installer'
+"Plug 'neovim/nvim-lspconfig'
 
 " start coc stuff here - auto complete js and python
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " this is for auto complete, prettier and tslinting 
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
-
 Plug 'jiangmiao/auto-pairs' "this will auto close ( [ {
 
-" these two plugins will add highlighting and indenting to JSX and TSX files.
+" these plugins will add highlighting and indenting to JSX and TSX files.
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+Plug 'junegunn/goyo.vim'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'npm install  ',
+"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+
+" maybe unused!!
+" Plug 'nvim-tree/nvim-web-devicons' " makes triangles in front of docs in NERDTree 
+
+Plug 'ryanoasis/vim-devicons'
+
+
+
 call plug#end()
 
-colorscheme dracula
+" colorscheme dracula
+
+colorscheme monokai_pro
+
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python', 'coc-pyright']  " list of CoC extensions needed
+
+
+set encoding=UTF-8
+
+" set guifont=agave\ Nerd\ Font\ Mono\ 12 
+
+" set guifont=DroidSansMono\ Nerd\ Font\ 12
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
@@ -68,13 +94,23 @@ let g:airline_powerline_fonts = 1
 
 
 lua <<EOF
- require "keymap"
+require "keymap"
+
+ -- require "example"
+
+ -- require "config/lsp/init"
+
+ -- require "config/lsp/installer"
 EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "" cmp
 """"""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""
+
 set completeopt=menu,menuone,noselect
+
 
 set signcolumn=yes
 
@@ -106,3 +142,5 @@ endfunction
 " INSTALL python coc support
 " :CocInstall coc-pyright 
 " :CocInstall coc-tsserver
+" :CocInstall coc-lists
+" :CocInstall
