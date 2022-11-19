@@ -19,6 +19,7 @@
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/ftdetect/txt.vim: txt.vim
+    ~/.config/nvim/coc-settings.json: coc-settings.json 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
