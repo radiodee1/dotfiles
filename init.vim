@@ -24,11 +24,10 @@ Plug 'tanvirtin/monokai.nvim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 
-"Plug 'williamboman/nvim-lsp-installer'
-"Plug 'neovim/nvim-lspconfig'
-
 " start coc stuff here - auto complete js and python
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " this is for auto complete, prettier and tslinting 
+
+Plug 'davidhalter/jedi-vim'
 
 Plug 'jiangmiao/auto-pairs' "this will auto close ( [ {
 
@@ -59,7 +58,7 @@ call plug#end()
 
 colorscheme monokai_pro
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python', 'coc-pyright']  " list of CoC extensions needed
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']  " list of CoC extensions needed
 
 
 set encoding=UTF-8
@@ -96,6 +95,16 @@ let g:airline_powerline_fonts = 1
 lua <<EOF
 require "keymap"
 
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
  -- require "example"
 
  -- require "config/lsp/init"
@@ -109,7 +118,8 @@ EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""
 
-set completeopt=menu,menuone,noselect
+" set completeopt=menu,menuone,noselect
+set completeopt=menu,preview 
 
 
 set signcolumn=yes
@@ -143,4 +153,4 @@ endfunction
 " :CocInstall coc-pyright 
 " :CocInstall coc-tsserver
 " :CocInstall coc-lists
-" :CocInstall
+" :CocInstall coc-java 
