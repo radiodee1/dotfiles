@@ -57,5 +57,10 @@
     "literals": ["node_modules"]
   },
   "explorer.mouseMode": "singleclick",
-  "explorer.debug": true
+  "explorer.debug": true,
+  "dialog.rounded": true,
+  "floatinput.status.enabled": true,
+  "suggest.floatConfig" :{
+      "border": true
+  }
 }
