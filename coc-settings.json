@@ -62,5 +62,8 @@
   "floatinput.status.enabled": true,
   "suggest.floatConfig" :{
       "border": true
+  },
+  "floatFactory.floatConfig": {
+      "border": true  
   }
 }
