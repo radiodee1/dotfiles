@@ -16,6 +16,7 @@
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
     ~/.config/nvim/lua/keymap.lua : keymap.lua
+    ~/.config/nvim/lua/lsp.lua: lsp.lua 
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/ftdetect/txt.vim: txt.vim
