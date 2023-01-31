@@ -61,6 +61,8 @@ call plug#end()
 
 " colorscheme dracula
 
+"highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
+
 colorscheme monokai_pro
 
 
@@ -127,6 +129,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true 
 
 EOF
+
+highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
