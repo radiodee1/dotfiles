@@ -1,6 +1,8 @@
 set clipboard=unnamedplus   " using system clipboard
 set number
 
+set nowrap 
+
 set hidden 
 
 call plug#begin("~/.vim/plugged")
@@ -130,7 +132,8 @@ vim.opt.expandtab = true
 
 EOF
 
-highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
+highlight Normal guibg=none
+highlight NonText guibg=none
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -148,10 +151,6 @@ set completeopt=menu,preview
 
 set signcolumn=yes
 
-"function! CheckBackspace() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
 
 " TO INSTALL VIM-PLUG
 
