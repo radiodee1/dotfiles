@@ -1,7 +1,6 @@
 set clipboard=unnamedplus   " using system clipboard
 set number
 
-set nowrap 
 
 set hidden 
 
@@ -74,6 +73,10 @@ let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', '
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
 
 set encoding=UTF-8
+
+" setlocal nowrap 
+let b:did_ftplugin = 1
+
 
 " set guifont=agave\ Nerd\ Font\ Mono\ 12 
 
@@ -151,7 +154,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 set completeopt=menu,preview 
 
 set signcolumn=yes
-
 
 " TO INSTALL VIM-PLUG
 

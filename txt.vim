@@ -1,6 +1,6 @@
 au BufRead,BufNewFile *.txt		set filetype=text 
 
-setlocal wrap linebreak nolist 
+setlocal wrap " linebreak nolist 
 
 nnoremap j gj
 vnoremap j gj
