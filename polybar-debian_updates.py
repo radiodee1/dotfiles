@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #coding=utf-8
 
 import apt
@@ -120,33 +120,12 @@ def isSecurityUpgrade(pkg, depcache):
 
 
 def print_result(pkgs):
-    """
-    Print package updates in a table
-    """
-    security_updates = filter(lambda x: x.get('security'), pkgs)
-    text = list()
-    text.append('Check Time: %s' % strftime('%m/%d/%Y %H:%M:%S'))
     if not pkgs:
-        text.append('No available updates on this machine.')
+        content = ''
     else:
-        # Updates are available, build a table
-        text.append('%d packages can be updated.' % len(pkgs))
-        text.append('%d updates are security updates.' % len(security_updates))
-        text.append('-' * 100)
-        # List available security updates
-        text.append('Package Name'.ljust(30) +
-                    'Current Version'.ljust(30) +
-                    'Latest Version'.ljust(30) +
-                    'Security'.ljust(10))
-        text.append('-' * 100)
-        for pkg in pkgs:
-            text.append('{:<30}{:<30}{:<30}{:<10}'.format(pkg.get('name'),
-                pkg.get('current_version'),
-                pkg.get('candidate_version'),
-                '*' if pkg.get('security') else ''))
-    text.append('=' * 100)
-    return '\n'.join(text)
+        content = '(%d)' % len(pkgs)
+    return content
 
 if __name__ == '__main__':
     pkgs = get_update_packages()
-    print print_result(pkgs)
+    print (print_result(pkgs))
