@@ -61,7 +61,8 @@ def get_update_packages():
     depcache.init()
 
     try:
-        saveDistUpgrade(cache,depcache)
+        #saveDistUpgrade(cache,depcache)
+        pass 
     except SystemError as e:
         sys.stderr.write("Error: Marking the upgrade (%s)" % e)
         sys.exit(-1)
@@ -78,10 +79,11 @@ def get_update_packages():
             continue
         record = {"name": pkg.name,
                   "security": isSecurityUpgrade(pkg, depcache),
-                  "section": pkg.section,
+                  #"section": pkg.section,
                   "current_version": inst_ver.ver_str if inst_ver else '-',
                   "candidate_version": cand_ver.ver_str  if cand_ver else '-',
-                  "priority": cand_ver.priority_str}
+                  #"priority": cand_ver.priority_str
+                  }
         pkgs.append(record)
 
     return pkgs

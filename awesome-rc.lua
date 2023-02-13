@@ -240,19 +240,19 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             myaudioitem,
-            mylogoutitem,
-            mypackageitem,
-            mykeyboardlayout,
-            battery_widget(),
+            --mylogoutitem,
+            --mypackageitem,
+            --mykeyboardlayout,
+            --battery_widget(),
              -- volume_widget(),
             
             volume_widget{
                 widget_type = 'arc'
             },
             
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
+            --wibox.widget.systray(),
+            --mytextclock,
+            --s.mylayoutbox,
         },
     }
 end)
@@ -336,6 +336,20 @@ globalkeys = gears.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
+
+
+-- doesn't work --
+
+  -- awful.key({ "Alt", },"Tab" ,       function ()
+  --          awful.layout.inc(-1)
+  --            print("here...")
+  --       end
+  --           ,
+  --            {description = "select previous", group = "layout"}),
+
+    
+
+
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -642,7 +656,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
-awful.util.spawn("/bin/nm-applet")
+-- awful.util.spawn("/bin/nm-applet")
 awful.spawn.with_shell("xcape -e 'Super_L=Super_L|space'")
-
+awful.spawn.with_shell("/bin/nm-applet")
 awful.spawn.with_shell("/home/dave/.config/polybar/launch.sh")
