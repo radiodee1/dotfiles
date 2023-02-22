@@ -192,8 +192,8 @@ require('lspconfig')['rust_analyzer'].setup{
       end,
     },
     window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
+      completion = cmp.config.window.bordered( {border='single'} ),
+      documentation = cmp.config.window.bordered( {border='single'} ),
     },
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
