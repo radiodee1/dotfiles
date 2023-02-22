@@ -23,6 +23,7 @@
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/after/ftdetect/txt.vim: txt.vim
     ~/.config/nvim/after/ftdetect/py.vim: py.vim
+    ~/.config/nvim/after/ftdetect/lua.vim: lua.vim 
     ~/.config/nvim/coc-settings.json: coc-settings.json 
     ~/.config/polybar/config.ini: polybar-config.ini 
     ~/.config/polybar/launch.sh: polybar-launch.sh 
