@@ -30,6 +30,7 @@
     ~/.config/awesome/rc.lua: awesome-rc.lua 
     ~/.config/awesome/theme.lua: awesome-theme.lua 
     ~/.local/share/applications/awesome-wm-logout.desktop: awesome-wm-logout.desktop
+    ~/.local/share/applications/Godot.desktop: Godot.desktop
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=godot-game-engine 
+Comment=Godot-4.0, a game engine.
+Exec=/home/dave/bin/godot 
+Type=Application
+Terminal=false
