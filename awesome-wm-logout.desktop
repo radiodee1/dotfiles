@@ -1,4 +1,4 @@
 [Desktop Entry]
 Exec=xdotool key Super+Shift+q
-Name=logout-awesome-wm
+Name=logout-window-manager
 Type=Application
