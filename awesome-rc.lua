@@ -134,7 +134,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
-
+-- override-redirect = true
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -403,9 +403,17 @@ clientkeys = gears.table.join(
             c.fullscreen = not c.fullscreen
             c:raise()
         end,
+
+
         {description = "toggle fullscreen", group = "client"}),
+
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
+              {description = "close", group = "client"}),
+
+
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
+
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
@@ -617,7 +625,8 @@ client.connect_signal("request::titlebars", function(c)
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal 
+            layout  = wibox.layout.fixed.horizontal
+            -- override-redirect = true
             
         },
         { -- Middle
