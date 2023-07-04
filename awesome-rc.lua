@@ -536,12 +536,16 @@ awful.rules.rules = {
      }
     },
     { rule = { class = "Google-chrome" },
-      properties =  { screen = 1, tag = "2", switchtotag = true } },
+      properties =  { screen = 1, tag = "2", switchtotag = true, fullscreen = false } },
 
     { rule = { class = "thunderbird" },
-      properties =  { screen = 1, tag = "1", switchtotag = true } },
+      properties =  { screen = 1, tag = "1", switchtotag = true, fullscreen = false , floating = false, maximized = false} },
+    
+      { rule = { class = "org.gnome.Nautilus" },
+      properties =  { screen = 1, tag = "5", switchtotag = true, fullscreen = false, floating = false, maximized = false } },
 
 
+     -- {{{
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -572,7 +576,7 @@ awful.rules.rules = {
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
       }, properties = { floating = true }},
-
+    -- }}}
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = false }
