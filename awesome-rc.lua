@@ -24,6 +24,8 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 
+local apt_widget = require("awesome-wm-widgets.apt-widget.apt-widget")
+
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -136,6 +138,13 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
 -- override-redirect = true
 
+myspacer = wibox.widget{
+    markup = ' | ',
+    --align  = 'center',
+    --valign = 'center',
+    widget = wibox.widget.textbox
+}
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -220,8 +229,11 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
-        -- filter  = awful.widget.tasklist.filter.currenttags,
+        filter  = awful.widget.tasklist.filter.currenttags,
         -- buttons = tasklist_buttons
+        style = {
+            bg = '#000000'
+        }
     }
 
     -- Create the wibox
@@ -232,27 +244,40 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
-            s.mypromptbox,
+            myspacer,
+            -- s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            myaudioitem,
-            --mylogoutitem,
-            --mypackageitem,
-            --mykeyboardlayout,
-            --battery_widget(),
-             -- volume_widget(),
-            
-            volume_widget{
-                widget_type = 'arc'
+            -- myaudioitem,
+            -- mylogoutitem,
+            apt_widget(),
+            myspacer,
+            -- mykeyboardlayout,
+            -- myspacer,
+            battery_widget{
+                display_notification = true,
+                show_current_level = true,
+                font = "Ubuntu Mono 12",
             },
+            -- myspacer,
+
+                        -- volume_widget(),
+            myspacer,
+            volume_widget(),
+            -- volume_widget{ widget_type = 'arc' },
+            myspacer,
+
+            -- wibox.widget.systray(),
             
-            --wibox.widget.systray(),
-            --mytextclock,
-            --s.mylayoutbox,
+            mytextclock,
+            myspacer,
+            wibox.widget.systray(),
+
+            -- s.mylayoutbox,
         },
     }
 end)
@@ -672,4 +697,4 @@ awful.spawn.with_shell("nitrogen --restore")
 -- awful.util.spawn("/bin/nm-applet")
 awful.spawn.with_shell("xcape -e 'Super_L=Super_L|space'")
 awful.spawn.with_shell("/bin/nm-applet")
-awful.spawn.with_shell("/home/dave/.config/polybar/launch.sh")
+-- awful.spawn.with_shell("/home/dave/.config/polybar/launch.sh")
