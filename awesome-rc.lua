@@ -27,6 +27,9 @@ local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local apt_widget = require("awesome-wm-widgets.apt-widget.apt-widget")
 
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+
+
+local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -254,6 +257,13 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- myaudioitem,
             -- mylogoutitem,
+            fs_widget({ 
+                -- bg = "#ffffff",
+                -- fg = "#000000",
+                popup_bg = "#222222ff",
+                widget_background_color = "#484848ff",
+                mounts = { '/mnt/tera', '/' } }), -- multiple mounts
+            myspacer,
             apt_widget(),
             myspacer,
             -- mykeyboardlayout,
