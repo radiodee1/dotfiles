@@ -708,3 +708,6 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("xcape -e 'Super_L=Super_L|space'")
 awful.spawn.with_shell("/bin/nm-applet")
 -- awful.spawn.with_shell("/home/dave/.config/polybar/launch.sh")
+
+-- the volume_widget requires 'pulseaudio'
+-- all widgets require the awesome-wm-widgets github repo cloned into the '.config/awesome/' dir!
