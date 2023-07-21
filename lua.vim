@@ -7,10 +7,16 @@ au BufNewFile,BufRead *.lua setlocal nowrap
 
 " setlocal wrap nowrap 
 
-" lua <<EOF 
-"vim.wo.wrap = false
 
-" EOF
+lua <<EOF
+
+require'lspconfig'.lua_ls.setup {
+    -- settings = {
+        -- Settings go here!
+    -- }
+}
+
+EOF
 
 nnoremap j gj
 vnoremap j gj
