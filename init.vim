@@ -164,3 +164,7 @@ set signcolumn=yes
 " :CocInstall coc-tsserver
 " :CocInstall coc-lists
 " :CocInstall coc-java 
+
+" INSTALL lua and python on maven lsp
+" :MavenInstall lua-language-server
+" :MavenInstall pyright 
