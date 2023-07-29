@@ -14,3 +14,6 @@
 /dev/nvme0n1p3	/mnt/tera	ext4	defaults	0	1
 
 /mnt/tera/home	/home	none 	defaults,bind	0	0
+
+/mnt/tera/docker	/var/lib/docker	none	defaults,bind	0	0
+
