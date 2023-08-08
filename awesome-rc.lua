@@ -148,6 +148,9 @@ myspacer = wibox.widget{
     widget = wibox.widget.textbox
 }
 
+mysystray = wibox.widget.systray()
+mysystray:set_base_size(25)
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -285,8 +288,8 @@ awful.screen.connect_for_each_screen(function(s)
             
             mytextclock,
             myspacer,
-            wibox.widget.systray(),
-
+            -- wibox.widget.systray(),
+            mysystray
             -- s.mylayoutbox,
         },
     }
