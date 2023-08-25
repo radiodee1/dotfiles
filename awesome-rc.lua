@@ -142,9 +142,19 @@ mytextclock = wibox.widget.textclock()
 -- override-redirect = true
 
 myspacer = wibox.widget{
-    markup = ' | ',
-    --align  = 'center',
-    --valign = 'center',
+    orientation = 'vertical', 
+    -- span_ratio = 1.0,
+    forced_width = 2,
+    -- border_width = 1,
+    -- markup = ' | ',
+    -- align  = 'center',
+    -- valign = 'center',
+    -- widget = wibox.widget.textbox
+    widget = wibox.widget.separator
+}
+
+space = wibox.widget{
+    markup = ' ',
     widget = wibox.widget.textbox
 }
 
@@ -251,10 +261,14 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             -- mylauncher,
+            space,
             s.mytaglist,
+            space,
             myspacer,
+            space,
             -- s.mypromptbox,
         },
+        -- space,
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
@@ -270,17 +284,19 @@ awful.screen.connect_for_each_screen(function(s)
             apt_widget(),
             myspacer,
             -- mykeyboardlayout,
-            -- myspacer,
+            space,
             battery_widget{
                 display_notification = true,
                 show_current_level = true,
                 font = "Ubuntu Mono 12",
             },
-            -- myspacer,
+            space,
 
                         -- volume_widget(),
             myspacer,
+            space,
             volume_widget(),
+            space,
             -- volume_widget{ widget_type = 'arc' },
             myspacer,
 
