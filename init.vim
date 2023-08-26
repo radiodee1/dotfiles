@@ -58,6 +58,8 @@ Plug 'L3MON4D3/LuaSnip'
 " Icons
 Plug 'onsails/lspkind.nvim'
 
+Plug 'norcalli/nvim-colorizer.lua'
+
 
 call plug#end()
 
@@ -118,7 +120,7 @@ if has("persistent_undo")
     set undofile
 endif
 
-
+lua require'colorizer'.setup()
 
 lua <<EOF
 require "keymap"
