@@ -15,3 +15,12 @@ For ssh directory:
 chmod 600 ~/.ssh/*
 chmod 700 ~/.ssh/ 
 ```
+
+For awesome:
+```
+$ sudo apt install compton nitrogen xcape xdotool pulseaudio 
+```
+
+Note: pulseaudio may need another plugin-type package.
+
+all widgets require the awesome-wm-widgets github repo cloned into the '.config/awesome/' dir!
