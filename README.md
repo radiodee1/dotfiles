@@ -9,4 +9,9 @@ For Powerline install:
 ```
 # sudo apt install powerline fonts-powerline
 ```
+For ssh directory:
 
+```
+$ chmod 600 ~/.ssh/*
+$ chmod 700 ~/.ssh/ 
+```
