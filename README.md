@@ -18,7 +18,11 @@ chmod 700 ~/.ssh/
 
 For awesome:
 ```
-$ sudo apt install compton nitrogen xcape xdotool pulseaudio 
+$ sudo apt install compton nitrogen xcape xdotool ripgrep pulseaudio
+
+$ cd ~/.config/awesome/awesome-wm-widgets/ && git checkout f190f137
+## this commit is May 12.
+
 ```
 
 Note: pulseaudio may need another plugin-type package.
