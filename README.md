@@ -18,7 +18,7 @@ chmod 700 ~/.ssh/
 
 For awesome:
 ```
-$ sudo apt install compton nitrogen xcape xdotool ripgrep pulseaudio
+$ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio
 
 $ cd ~/.config/awesome/awesome-wm-widgets/ && git checkout f190f137
 ## this commit is May 12.
