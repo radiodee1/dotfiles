@@ -286,7 +286,7 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             space,
             battery_widget{
-                display_notification = true,
+                -- display_notification = true,
                 show_current_level = true,
                 font = "Ubuntu Mono 12",
             },
