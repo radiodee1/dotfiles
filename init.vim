@@ -93,8 +93,7 @@ autocmd VimEnter * NvimTreeOpen | if argc() > 0 || exists("s:std_in") | wincmd p
 
 " Close the tab if NERDTree is the only window remaining in it.
 "autocmd BufEnter * if winnr('$') == 1 && exists('b:NvimTree') && b:NvimTree.isTabTree() | quit | endif
-
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NvimTree_1') && b:NvimTree_1.isTabTree()   | quit | endif
+"autocmd BufEnter * if winnr('$') == 1 && exists('b:NvimTree_1') && b:NvimTree_1.isTabTree()   | quit | endif
 
 set mouse=a 
 
