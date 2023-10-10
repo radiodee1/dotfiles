@@ -139,13 +139,22 @@ require "lsp"
 
 require "tree"
 
--- vim.lsp.start()
--- require "coc"
+-- 
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true 
+
+-- navic stuff --
+local navic = require("nvim-navic")
+
+require("lspconfig").clangd.setup {
+    on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+    end
+}
+-- end navic stuff --
 
 EOF
 
