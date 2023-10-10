@@ -31,6 +31,7 @@
     ~/.config/awesome/rc.lua: awesome-rc.lua 
     ~/.config/awesome/theme.lua: awesome-theme.lua
     ~/.config/i3/config: i3-config
+    ~/.local/share/applications/neovim-vim-launcher.desktop: neovim-vim-launcher.desktop
     ~/.local/share/applications/awesome-wm-logout.desktop: awesome-wm-logout.desktop
     ~/.local/share/applications/Godot.desktop: Godot.desktop
 

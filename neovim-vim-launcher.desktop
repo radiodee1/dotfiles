@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=neovim-vim-launcher
+GenericName=Nvim Editor
+Comment=Edit text based files
+
+Exec=/home/dave/bin/nvim-linux64/bin/nvim %U
+Terminal=true
