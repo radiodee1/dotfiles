@@ -63,6 +63,10 @@ Plug 'onsails/lspkind.nvim'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
+Plug 'SmiteshP/nvim-navic'
+
+
+Plug 'utilyre/barbecue.nvim'
 
 call plug#end()
 
@@ -125,6 +129,8 @@ if has("persistent_undo")
 endif
 
 lua require'colorizer'.setup()
+
+lua require('barbecue').setup()
 
 lua <<EOF
 require "keymap"
