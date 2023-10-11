@@ -33,8 +33,8 @@ Download a appimage from the internet and make sure libfuse2 is installed. Put t
 
 ```
 
-chmod a+x nvim.appimage 
-ln -s nvim.appimage nvim
+$ sudo chmod a+x nvim.appimage 
+$ sudo ln -s nvim.appimage nvim
 
 ```
 
