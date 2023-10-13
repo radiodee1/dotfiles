@@ -30,4 +30,10 @@ vnoremap <Down> gj
 nnoremap <Up> gk
 vnoremap <Up> gk
 
+lua <<EOF
+vim.opt.tabstop=2
+vim.opt.shiftwidth=2
+
+EOF
+
 
