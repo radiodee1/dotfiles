@@ -719,6 +719,12 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- awful.spawn.with_shell("feh --bg-fill /usr/share/wallpapers/DarkestHour/contents/images/1920x1080.jpg")
 
+-- always un-maximized Nautilus
+client.connect_signal("property::maximized", function(c)
+	if c.maximized and c.class == "org.gnome.Nautilus" then
+		c.maximized = false
+	end
+end)
 
 
 awful.spawn.with_shell("compton")
