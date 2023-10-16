@@ -1,7 +1,7 @@
 set clipboard=unnamedplus   " using system clipboard
 set number
 
-
+"set clipboard=unnamed
 set hidden 
 
 call plug#begin("~/.vim/plugged")

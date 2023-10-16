@@ -162,6 +162,7 @@ mysystray = wibox.widget.systray()
 mysystray:set_base_size(25)
 
 -- Create a wibox for each screen and add it
+--[[
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
                     awful.button({ modkey }, 1, function(t)
@@ -178,7 +179,7 @@ local taglist_buttons = gears.table.join(
                     awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
                     awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
                 )
-
+--]]
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
                                               if c == client.focus then
