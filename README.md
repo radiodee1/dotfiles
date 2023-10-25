@@ -49,5 +49,10 @@ Download a appimage from the internet and make sure libfuse2 is installed. Put t
 $ sudo chmod a+x nvim.appimage 
 $ sudo ln -s nvim.appimage nvim
 
+## or ##
+
+$ sudo apt install build-essential cmake gettext
+
 ```
 
+If you choose the second option go to the 'neovim' website and install from source.
