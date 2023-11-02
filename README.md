@@ -56,3 +56,9 @@ $ sudo apt install build-essential cmake gettext
 ```
 
 If you choose the second option go to the 'neovim' website and install from source.
+
+If you have trouble with awesome-wm-widgets, try checking out this version:
+
+```
+git checkout f190f137
+```
