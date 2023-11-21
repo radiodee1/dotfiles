@@ -87,17 +87,6 @@ set encoding=UTF-8
 let b:did_ftplugin = 1
 
 
-" set guifont=agave\ Nerd\ Font\ Mono\ 12 
-
-" set guifont=DroidSansMono\ Nerd\ Font\ 12
-
-" Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NvimTreeOpen | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-
-" Close the tab if NERDTree is the only window remaining in it.
-"autocmd BufEnter * if winnr('$') == 1 && exists('b:NvimTree') && b:NvimTree.isTabTree() | quit | endif
-"autocmd BufEnter * if winnr('$') == 1 && exists('b:NvimTree_1') && b:NvimTree_1.isTabTree()   | quit | endif
 
 set mouse=a 
 
@@ -157,6 +146,8 @@ require("lspconfig").clangd.setup {
 -- end navic stuff --
 
 EOF
+
+NvimTreeClose
 
 highlight Normal guibg=none
 highlight NonText guibg=none
