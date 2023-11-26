@@ -141,7 +141,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock( ' %a %b %d, %I:%M ' )
 -- override-redirect = true
 
 myspacer = wibox.widget{
@@ -279,7 +279,9 @@ awful.screen.connect_for_each_screen(function(s)
             -- myaudioitem,
             -- mylogoutitem,
             myspacer,
-            logout_menu_widget(),
+            logout_menu_widget{
+                onlock = function() awful.spawn.with_shell('i3lock-fancy') end
+            },
             myspacer,
             fs_widget({ 
                 -- bg = "#ffffff",
