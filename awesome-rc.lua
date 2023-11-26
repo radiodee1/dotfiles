@@ -30,6 +30,9 @@ local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
+
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -275,6 +278,9 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- myaudioitem,
             -- mylogoutitem,
+            myspacer,
+            logout_menu_widget(),
+            myspacer,
             fs_widget({ 
                 -- bg = "#ffffff",
                 -- fg = "#000000",

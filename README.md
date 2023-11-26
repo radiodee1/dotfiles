@@ -31,7 +31,7 @@ chmod 700 ~/.ssh/
 
 For awesome:
 ```
-$ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2
+$ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock
 
 
 ```
