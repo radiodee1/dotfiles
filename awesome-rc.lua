@@ -141,7 +141,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock( ' %a %b %d, %I:%M ' )
+mytextclock = wibox.widget.textclock( ' %a %b %d, %I:%M %p ' )
 -- override-redirect = true
 
 myspacer = wibox.widget{
