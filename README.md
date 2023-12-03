@@ -45,17 +45,22 @@ For nvim:
 Download a appimage from the internet and make sure libfuse2 is installed. Put the appimage at `/usr/local/bin/`. You may need to run these commands.
 
 ```
+## from appimage ##
 
 $ sudo chmod a+x nvim.appimage 
 $ sudo ln -s nvim.appimage nvim
 
-## or ##
+## or from snap ##
+
+$ sudo snap install nvim 
+
+## or from source ##
 
 $ sudo apt install build-essential cmake gettext
 
 ```
 
-If you choose the second option go to the 'neovim' website and install from source.
+If you choose the third option go to the 'neovim' website and install from source.
 
 If you have trouble with awesome-wm-widgets, try checking out this version:
 
