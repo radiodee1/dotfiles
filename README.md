@@ -42,6 +42,12 @@ all widgets require the awesome-wm-widgets github repo cloned into the '.config/
 
 For nvim:
 
+The neovim project can be found on line here. At the time of this writing the Ubuntu repo has neovim 0.7.2-8. This is not very recent, so some plugins will not work. Use a version of neovim above 0.8 or 0.9.
+
+```
+https://github.com/neovim/neovim
+```
+
 On Ubuntu snaps can make installing nvim very easy. Use this command.
 
 ```
