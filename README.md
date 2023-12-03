@@ -4,7 +4,7 @@ See this link for instructions:
 
 https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
 
-For Powerline install:
+## For Powerline install:
 
 ```
 $ sudo apt install powerline fonts-powerline
@@ -22,14 +22,14 @@ fi
 ```
 
 
-For ssh directory:
+## For ssh directory:
 
 ```
 chmod 600 ~/.ssh/*
 chmod 700 ~/.ssh/ 
 ```
 
-For awesome:
+## For awesome:
 ```
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy
 
@@ -40,9 +40,9 @@ Note: pulseaudio may need another plugin-type package.
 
 all widgets require the awesome-wm-widgets github repo cloned into the '.config/awesome/' dir!
 
-For nvim:
+## For nvim:
 
-The neovim project can be found on line here. At the time of this writing the Ubuntu repo has neovim 0.7.2-8. This is not very recent, so some plugins will not work. Use a version of neovim above 0.8 or 0.9.
+The neovim project can be found on line here. At the time of this writing the Ubuntu repo has neovim 0.7.2-8. This is not very recent, so some plugins will not work. Use a version of neovim above 0.8 or 0.9 from the github site.
 
 ```
 https://github.com/neovim/neovim
@@ -74,6 +74,7 @@ You can build the package from source. This option is not so difficult. You will
 $ sudo apt install build-essential cmake gettext
 
 ```
+## For awesome-wm-widgets
 
 If you have trouble with awesome-wm-widgets, try checking out this version:
 
