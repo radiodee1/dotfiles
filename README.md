@@ -42,7 +42,16 @@ all widgets require the awesome-wm-widgets github repo cloned into the '.config/
 
 For nvim:
 
-Download a appimage from the internet and make sure libfuse2 is installed. Put the appimage at `/usr/local/bin/`. You may need to run these commands.
+On Ubuntu snaps can make installing nvim very easy. Use this command.
+
+```
+## from snap ##
+
+$ sudo snap install nvim 
+
+```
+
+Or download a appimage from the internet and make sure libfuse2 is installed. Put the appimage at `/usr/local/bin/`. You may need to run these commands.
 
 ```
 ## from appimage ##
@@ -50,17 +59,15 @@ Download a appimage from the internet and make sure libfuse2 is installed. Put t
 $ sudo chmod a+x nvim.appimage 
 $ sudo ln -s nvim.appimage nvim
 
-## or from snap ##
+```
+You can build the package from source. This option is not so difficult. You will need to install some of the following packages.
 
-$ sudo snap install nvim 
-
-## or from source ##
+```
+## from source ##
 
 $ sudo apt install build-essential cmake gettext
 
 ```
-
-If you choose the third option go to the 'neovim' website and install from source.
 
 If you have trouble with awesome-wm-widgets, try checking out this version:
 
