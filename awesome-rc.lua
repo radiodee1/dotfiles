@@ -165,7 +165,7 @@ mysystray = wibox.widget.systray()
 mysystray:set_base_size(25)
 
 -- Create a wibox for each screen and add it
---[[
+---[[
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
                     awful.button({ modkey }, 1, function(t)
@@ -276,6 +276,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            -- expand = "none",
+            -- fg = "#990000",
             -- myaudioitem,
             -- mylogoutitem,
             myspacer,
@@ -290,7 +292,7 @@ awful.screen.connect_for_each_screen(function(s)
                 widget_background_color = "#484848ff",
                 mounts = { '/mnt/tera', '/' } }), -- multiple mounts
             myspacer,
-            apt_widget(),
+            apt_widget({ visible=true }),
             myspacer,
             -- mykeyboardlayout,
             space,
