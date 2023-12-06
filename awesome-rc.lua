@@ -161,6 +161,13 @@ space = wibox.widget{
     widget = wibox.widget.textbox
 }
 
+local function visibility_util(ref, printable)
+    if not ref == nil and ref.width > 2 then
+        return printable
+    end
+    return
+end
+
 mysystray = wibox.widget.systray()
 mysystray:set_base_size(25)
 
@@ -295,16 +302,19 @@ awful.screen.connect_for_each_screen(function(s)
             apt_widget({ visible=true }),
             myspacer,
             -- mykeyboardlayout,
-            space,
+            -- space,
+            visibility_util(battery_widget{ show_current_level = true }, space),
+
             battery_widget{
                 -- display_notification = true,
                 show_current_level = true,
                 font = "Ubuntu Mono 12",
             },
-            space,
+            -- space,
+            visibility_util(battery_widget{ show_current_level = true }, space),
 
-                        -- volume_widget(),
-            myspacer,
+            visibility_util(battery_widget{ show_current_level = true }, myspacer),
+            -- myspacer,
             space,
             volume_widget(),
             space,
