@@ -20,7 +20,11 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
   source /usr/share/powerline/bindings/bash/powerline.sh
 fi
 ```
+## For Fonts 
 
+```
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.zip
+```
 
 ## For ssh directory:
 
