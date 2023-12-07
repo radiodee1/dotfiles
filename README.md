@@ -30,7 +30,8 @@ mkdir ~/.local/share/fonts
 ## then move the .ttf files to the fonts dir
 fc-cache -v -f 
 fc-list | grep UbuntuNerd
-
+## then a restart may be necessary.
+## from gnome-terminal preferences choose the Ubuntu Mono font.
 ```
 
 ## For ssh directory:
