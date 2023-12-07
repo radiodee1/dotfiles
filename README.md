@@ -24,6 +24,13 @@ fi
 
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.zip
+
+mkdir ~/.local/share/fonts
+
+## then move the .ttf files to the fonts dir
+fc-cache -v -f 
+fc-list | grep UbuntuNerd
+
 ```
 
 ## For ssh directory:
