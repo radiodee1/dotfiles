@@ -24,6 +24,8 @@ fi
 
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.zip
+## or ##
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
 
 mkdir ~/.local/share/fonts
 
