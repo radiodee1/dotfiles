@@ -14,7 +14,7 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.config/nvim/init.vim: init.vim
+    ~/.config/nvim/init.vim: nvim-init.vim
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
     ~/.config/nvim/lua/keymap.lua : keymap.lua
@@ -22,9 +22,9 @@
     ~/.config/nvim/lua/tree.lua: tree.lua 
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
-    ~/.config/nvim/after/ftdetect/txt.vim: txt.vim
-    ~/.config/nvim/after/ftdetect/py.vim: py.vim
-    ~/.config/nvim/after/ftdetect/lua.vim: lua.vim 
+    ~/.config/nvim/after/ftdetect/txt.vim: nvim-after-ftdetect-txt.vim 
+    ~/.config/nvim/after/ftdetect/py.vim: nvim-after-ftdetect-py.vim 
+    ~/.config/nvim/after/ftdetect/lua.vim: nvim-after-ftdetect-lua.vim 
     ~/.config/nvim/coc-settings.json: coc-settings.json 
     ~/.config/polybar/config.ini: polybar-config.ini 
     ~/.config/polybar/launch.sh: polybar-launch.sh 
