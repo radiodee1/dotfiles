@@ -17,9 +17,9 @@
     ~/.config/nvim/init.vim: nvim-init.vim
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
-    ~/.config/nvim/lua/keymap.lua : keymap.lua
-    ~/.config/nvim/lua/lsp.lua: lsp.lua 
-    ~/.config/nvim/lua/tree.lua: tree.lua 
+    ~/.config/nvim/lua/keymap.lua : nvim-lua-keymap.lua
+    ~/.config/nvim/lua/lsp.lua: nvim-lua-lsp.lua 
+    ~/.config/nvim/lua/tree.lua: nvim-lua-tree.lua 
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/after/ftdetect/txt.vim: nvim-after-ftdetect-txt.vim 
