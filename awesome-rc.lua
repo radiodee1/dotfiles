@@ -162,7 +162,7 @@ space = wibox.widget{
 }
 
 local function visibility_util(ref, printable)
-    if not ref == nil and ref.width > 2 then
+    if (not ref == nil) and ref.width > 2 then
         return printable
     end
     return
