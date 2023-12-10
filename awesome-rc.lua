@@ -413,18 +413,6 @@ globalkeys = gears.table.join(
               {description = "select previous", group = "layout"}),
 
 
--- doesn't work --
-
-  -- awful.key({ "Alt", },"Tab" ,       function ()
-  --          awful.layout.inc(-1)
-  --            print("here...")
-  --       end
-  --           ,
-  --            {description = "select previous", group = "layout"}),
-
-    
-
-
 
     awful.key({ modkey, "Control" }, "n",
               function ()
