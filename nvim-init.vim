@@ -92,7 +92,6 @@ let b:did_ftplugin = 1
 set mouse=a 
 
 "let g:NERDTreeMouseMode = 2 
-let g:airline_powerline_fonts = 1 
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -100,8 +99,8 @@ endif
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='atomic'  " 'dracula'  'dracula'   'badwolf'
-let g:airline_powerline_fonts = 1 
-let g:airline#extensions#tabline#formatter =  'unique_tail'
+" let g:airline_powerline_fonts = 1 
+let g:airline#extensions#tabline#formatter ='short_path' "'unique_tail'
 """"""""""""""""""""""""""""""""""""""""
 "" keymaps
 """"""""""""""""""""""""""""""""""""""""
