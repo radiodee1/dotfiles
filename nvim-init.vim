@@ -67,6 +67,7 @@ Plug 'SmiteshP/nvim-navic'
 
 
 Plug 'utilyre/barbecue.nvim'
+Plug 'habamax/vim-godot'
 
 call plug#end()
 
@@ -98,7 +99,7 @@ if has("autocmd")
 endif
 
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='dracula' " 'dracula'   'badwolf'
+let g:airline_theme='atomic'  " 'dracula'  'dracula'   'badwolf'
 let g:airline_powerline_fonts = 1 
 let g:airline#extensions#tabline#formatter =  'unique_tail'
 """"""""""""""""""""""""""""""""""""""""
