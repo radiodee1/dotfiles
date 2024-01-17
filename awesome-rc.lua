@@ -299,7 +299,7 @@ awful.screen.connect_for_each_screen(function(s)
                 widget_background_color = "#484848ff",
                 mounts = { '/mnt/tera', '/' } }), -- multiple mounts
             myspacer,
-            apt_widget({ visible=true }),
+            apt_widget({icon_control=true}),
             myspacer,
             -- mykeyboardlayout,
             -- space,
