@@ -6,7 +6,7 @@ set hidden
 
 call plug#begin("~/.vim/plugged")
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 
 " Plug 'ray-x/lsp_signature.nvim'
 
