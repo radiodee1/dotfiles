@@ -24,7 +24,8 @@
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/after/ftdetect/txt.vim: nvim-after-ftdetect-txt.vim 
     ~/.config/nvim/after/ftdetect/py.vim: nvim-after-ftdetect-py.vim 
-    ~/.config/nvim/after/ftdetect/lua.vim: nvim-after-ftdetect-lua.vim 
+    ~/.config/nvim/after/ftdetect/lua.vim: nvim-after-ftdetect-lua.vim
+    ~/.config/nvim/after/ftdetect/gd.vim: nvim-after-ftdetect-gd.vim
     ~/.config/nvim/coc-settings.json: coc-settings.json 
     ~/.config/polybar/config.ini: polybar-config.ini 
     ~/.config/polybar/launch.sh: polybar-launch.sh 

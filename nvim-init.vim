@@ -128,12 +128,13 @@ require "lsp"
 
 require "tree"
 
+require "godot"
 -- 
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true 
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
+-- vim.opt.shiftwidth = 4
+-- vim.opt.expandtab = true 
 
 -- navic stuff --
 local navic = require("nvim-navic")
@@ -146,6 +147,8 @@ require("lspconfig").clangd.setup {
 -- end navic stuff --
 
 EOF
+
+set completeopt=menu,menuone,noselect
 
 NvimTreeClose
 
