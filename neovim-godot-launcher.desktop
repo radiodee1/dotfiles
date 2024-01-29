@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=neovim-godot-launcher
+GenericName=Nvim Editor For Godot
+Comment=Edit text based files
+
+Exec=nvim --listen /tmp/nvim.pipe
+#Exec=nvim %U
+Terminal=true
+
+#set godot editor to
+# nvim --server /tmp/nvim.pipe --remote {file}
