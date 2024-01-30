@@ -52,7 +52,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 "Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
-"Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-cmdline'
 
 "  Snippets
 Plug 'L3MON4D3/LuaSnip'

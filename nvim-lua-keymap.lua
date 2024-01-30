@@ -78,5 +78,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-keymap("c", "<Down>", "<C-n>", opts)
-keymap("c", "<Up>", "<C-p>", opts)
+-- Command line --
+-- keymap("c", "<Down>", "<C-n>", opts)
+-- keymap("c", "<Up>", "<C-p>", opts)

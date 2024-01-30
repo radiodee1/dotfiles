@@ -26,5 +26,5 @@ set noexpandtab
 " set autoindent
 " set smarttab
 
-echo &expandtab
-"echo &shiftwidth
+" echo &expandtab
+" echo &shiftwidth
