@@ -4,8 +4,6 @@ set number
 "set clipboard=unnamed
 set hidden 
 
-" let g:command_picshow_png = "google-chrome"
-" let g:command_picshow_jpg = "google-chrome"
 
 call plug#begin("~/.vim/plugged")
 Plug 'nvim-lua/plenary.nvim'
@@ -18,9 +16,8 @@ Plug 'tanvirtin/monokai.nvim'
 
 Plug 'vim-airline/vim-airline-themes'
 
-" Plug 'preservim/nerdtree'
 
-Plug 'nvim-tree/nvim-tree.lua'
+" Plug 'nvim-tree/nvim-tree.lua'
 
 Plug 'vim-airline/vim-airline'
 
@@ -72,7 +69,7 @@ Plug 'SmiteshP/nvim-navic'
 Plug 'utilyre/barbecue.nvim'
 Plug 'habamax/vim-godot'
 
-Plug '~/workspace/pic-show.nvim'
+Plug 'radiodee1/pic-show.nvim'
 
 call plug#end()
 
@@ -132,15 +129,10 @@ require "keymap"
 
 require "lsp"
 
-require "tree"
+-- require "tree"
 
 require "godot"
 -- 
-
--- vim.opt.tabstop = 4
--- vim.opt.softtabstop = 4
--- vim.opt.shiftwidth = 4
--- vim.opt.expandtab = true 
 
 -- navic stuff --
 local navic = require("nvim-navic")
@@ -156,7 +148,6 @@ EOF
 
 set completeopt=menu,menuone,noselect
 
-NvimTreeClose
 
 highlight Normal guibg=none
 highlight NonText guibg=none
