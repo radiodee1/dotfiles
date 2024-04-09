@@ -69,6 +69,8 @@ Plug 'SmiteshP/nvim-navic'
 Plug 'utilyre/barbecue.nvim'
 Plug 'habamax/vim-godot'
 
+Plug '~/workspace/pic-show.nvim'
+
 call plug#end()
 
 " colorscheme dracula
@@ -79,6 +81,7 @@ colorscheme monokai_pro
 
 
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
+
 
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
 
@@ -167,7 +170,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 """"""""""""""""""""""""""""""""""""""""""""""
 
 " set completeopt=menu,menuone,noselect
-set completeopt=menu,preview 
+" set completeopt=menu,preview 
 
 set signcolumn=yes
 
