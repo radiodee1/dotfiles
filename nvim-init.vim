@@ -4,6 +4,9 @@ set number
 "set clipboard=unnamed
 set hidden 
 
+" let g:command_picshow_png = "google-chrome"
+" let g:command_picshow_jpg = "google-chrome"
+
 call plug#begin("~/.vim/plugged")
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
