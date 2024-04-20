@@ -144,6 +144,12 @@ require("lspconfig").clangd.setup {
 }
 -- end navic stuff --
 
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("PicShowSetPrompt")
+	end,
+})
+
 EOF
 
 set completeopt=menu,menuone,noselect
@@ -156,6 +162,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "" cmp
