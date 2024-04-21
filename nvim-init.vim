@@ -28,7 +28,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs' "this will auto close ( [ {
 
 
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 
 Plug 'mbbill/undotree'
 
