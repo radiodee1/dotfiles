@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color|xterm-kitty|alacritty) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -91,6 +91,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias vim='nvim --listen /tmp/nvim.pipe'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -116,28 +117,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/usr/local/lib/nodejs/node-v14.17.5-linux-x64/bin:$PATH
-
-export VDPAU_DRIVER=va_gl
-
-export PATH=$HOME/.local/bin:$PATH
-
-
+# Powerline configuration
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  source /usr/share/powerline/bindings/bash/powerline.sh
+fi
 
 if [ -f ~/bin/bashrc.api_key.sh ]; then
-  source ~/bin/bashrc.api_key.sh
+    . ~/bin/bashrc.api_key.sh
 fi
 
-export GOOGLE_APPLICATION_CREDENTIALS=$HOME/bin/awesome-sr-7c31d97e029b.json
 
-#figlet "D. Liebman"
-if [ -f ~/.figlet.txt ]; then
-  cat ~/.figlet.txt
-fi
-
-if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-source /usr/share/powerline/bindings/bash/powerline.sh
-fi 
+export PATH=$HOME/.local/bin:$PATH
 
 shopt -s cdable_vars
 doc=~/Documents 
