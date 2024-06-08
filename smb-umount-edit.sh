@@ -1,2 +1,2 @@
-sudo umount /mnt/smb/edit
+sudo umount $HOME/mnt/smb/edit
 
