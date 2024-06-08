@@ -1,9 +1,4 @@
 
-MYNAME="$(id -u -n)"
-MYUID="$(id -u)"
- 
-echo $MYUID $MYNAME $HOME
-
 if [ -d $HOME/mnt/smb/edit  ]; then
     echo "mount point already set up"
 else
