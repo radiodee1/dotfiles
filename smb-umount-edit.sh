@@ -1,2 +1,4 @@
-sudo umount $HOME/mnt/smb/edit
+MYHOME=$HOME
+
+sudo umount $MYHOME/mnt/smb/edit
 
