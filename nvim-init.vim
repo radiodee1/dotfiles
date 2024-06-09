@@ -70,6 +70,9 @@ Plug 'utilyre/barbecue.nvim'
 Plug 'habamax/vim-godot'
 
 Plug 'radiodee1/pic-show.nvim'
+"Plug '~/workspace/pic-show.nvim'
+
+
 
 call plug#end()
 
