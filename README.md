@@ -90,6 +90,8 @@ $ sudo apt install build-essential cmake gettext
 ```
 ## Mounting NAS 
 
+The NAS is a pretty specific piece of hardware. The scripts here are not for everyone. Basically they are to allow me to use the NAS with little trouble. The NAS requires the root user's environment to mount and the regular user's environment to set up permissions and access, etc. Use the list below as a guide for mounting.
+
 - The nas needs an IP address. Set the ip address by running the shell script `./smb-setup-edit.sh` with one parameter, which is the required ip address. This puts the ip address in a temp file. If your ip address ever changes, run this script again.
 
 ```bash
