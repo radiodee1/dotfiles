@@ -88,10 +88,16 @@ You can build the package from source. This option is not so difficult. You will
 $ sudo apt install build-essential cmake gettext
 
 ```
-## For awesome-wm-widgets
+## Mounting NAS 
 
-If you have trouble with awesome-wm-widgets, try checking out this version:
+- The nas needs an IP address. Set the ip address by running the shell script `./smb-setup-edit.sh` with one parameter, which is the required ip address. This puts the ip address in a temp file. If your ip address ever changes, run this script again.
 
 ```
-git checkout f190f137
+./smb-setup-edit.sh 192.168.0.123
 ```
+
+- Run the same script without any parameter and the mount point for the nas will be created. This mount point is `$HOME/mnt/smb/edit`. 
+
+- Run the `smb-mount-edit.sh` script with one parameter, the smb password. The script will ask you for your sudo password. Then the script launches the mount process. Do not run this script as super user!
+
+- Unmount the smb share with the `smb-umount-edit.sh` script. It takes no parameters.
