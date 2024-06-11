@@ -92,7 +92,7 @@ $ sudo apt install build-essential cmake gettext
 
 - The nas needs an IP address. Set the ip address by running the shell script `./smb-setup-edit.sh` with one parameter, which is the required ip address. This puts the ip address in a temp file. If your ip address ever changes, run this script again.
 
-```
+```bash
 ./smb-setup-edit.sh 192.168.0.123
 ```
 
