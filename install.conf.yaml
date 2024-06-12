@@ -22,7 +22,7 @@
     ~/.config/nvim/lua/tree.lua: nvim-lua-tree.lua 
     ~/.config/nvim/lua/godot.lua: nvim-lua-godot.lua 
     ~/.config/nvim/lua/commands.lua: nvim-lua-commands.lua
-    ~/.config/nvim/md.css: md.css
+    ~/.config/nvim/md.css: nvim-md.css
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
     ~/.config/nvim/after/ftdetect/txt.vim: nvim-after-ftdetect-txt.vim 
