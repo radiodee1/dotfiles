@@ -88,6 +88,13 @@ You can build the package from source. This option is not so difficult. You will
 $ sudo apt install build-essential cmake gettext
 
 ```
+
+To use pandoc you must install it.
+
+```
+$ sudo apt install pandoc 
+```
+
 ## Mounting NAS 
 
 The NAS is a pretty specific piece of hardware. The scripts here are not for everyone. Basically they are to allow me to use the NAS with little trouble. The NAS requires the root user's environment to mount and the regular user's environment to set up permissions and access, etc. Use the list below as a guide for mounting.

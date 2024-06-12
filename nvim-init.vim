@@ -128,6 +128,8 @@ lua require'colorizer'.setup()
 lua require('barbecue').setup()
 
 lua <<EOF
+
+
 require "keymap"
 
 require "lsp"
@@ -136,6 +138,7 @@ require "lsp"
 
 require "godot"
 -- 
+require "commands"
 
 -- navic stuff --
 local navic = require("nvim-navic")

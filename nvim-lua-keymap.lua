@@ -81,3 +81,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Command line --
 -- keymap("c", "<Down>", "<C-n>", opts)
 -- keymap("c", "<Up>", "<C-p>", opts)
+
+keymap("c", "Markdown", ":!ls", opts)
