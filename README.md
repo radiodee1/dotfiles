@@ -89,7 +89,7 @@ $ sudo apt install build-essential cmake gettext
 
 ```
 
-To use pandoc you must install it.
+The custom Markdown and MarkdownInPlace commands use pandoc. To use pandoc you must install it.
 
 ```
 $ sudo apt install pandoc 
