@@ -10,7 +10,8 @@
     - ~/.config/nvim/lua
     - ~/.config/nvim/after/ftdetect
     - ~/.config/polybar 
-    - ~/.config/awesome 
+    - ~/.config/awesome
+    - ~/bin 
 
 - link:
     ~/.vimrc: vimrc
