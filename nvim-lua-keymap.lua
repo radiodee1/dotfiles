@@ -82,4 +82,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("c", "<Down>", "<C-n>", opts)
 -- keymap("c", "<Up>", "<C-p>", opts)
 
-keymap("c", "Markdown", ":!ls", opts)
+keymap("i", "<C-_>", "<C-x><C-f>", opts)

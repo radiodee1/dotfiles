@@ -72,6 +72,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'path' },
   },
 }
 
@@ -196,6 +197,7 @@ require('lspconfig')['rust_analyzer'].setup{
       -- { name = 'snippy' }, -- For snippy users.
     }, {
       { name = 'buffer' },
+      { name = 'path' }
     })
   })
 
@@ -212,7 +214,8 @@ require('lspconfig')['rust_analyzer'].setup{
   cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
-      { name = 'buffer' }
+      { name = 'buffer' },
+      { name = 'path' }
     }
   })
 
@@ -255,3 +258,5 @@ require('lspconfig')['rust_analyzer'].setup{
         }
       })
     })
+
+
