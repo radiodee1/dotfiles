@@ -1,7 +1,9 @@
 html_from_md () {
     NAME=$1
-    pandoc -o "$NAME.html" -s -c $HOME/.config/nvim/md.css "$NAME" 
-    sed -i  's/.md"/.md.html"/g' "$NAME.html" 
+
+    CSS=md.css 
+    pandoc -o "$NAME.html" -s -c $CSS "$NAME" 
+    sed -i  's/.md\"/.md.html\"/g' "$NAME.html" 
 }
 
 
