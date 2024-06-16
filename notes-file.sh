@@ -7,6 +7,7 @@ html_from_md () {
 }
 
 
+
 if [ $# -eq 0 ]; then
     echo "must add text for title!!"
     exit
@@ -18,11 +19,12 @@ if [ $# -eq 1 ]; then
         FULLNAME=$1
         if [ "${FULLNAME: -5}" == ".html" ]; then
             echo 'do not edit html!'
-            exit 
+            FULLNAME=${FULLNAME: -5}
+            
         fi
         
-        nvim $1
-        html_from_md $1
+        nvim $FULLNAME
+        html_from_md $FULLNAME
         exit
     fi
 fi
@@ -31,6 +33,33 @@ SPACE=" "
 UNDERLINE="_"
 IN=$@
 
+LIST=""
+
+for i in $IN;
+do 
+    echo $i
+     if [ "${i: -8}" == ".md.html" ]; then
+        echo 'do not edit html!'
+        #LIST="${i:0:-5} $LIST"
+
+    elif [ "${i: -3}" == ".md" ]; then
+        echo 'add to list'
+        LIST="${i} $LIST"
+    fi
+    
+done
+
+echo $LIST "<<<"
+
+if [ "${LIST}" != "" ]; then
+    nvim $LIST
+
+    for l in $LIST;
+    do 
+        html_from_md $l 
+    done
+    exit
+fi
 
 NAME="${IN//$SPACE/$UNDERLINE}"
 
