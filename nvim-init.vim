@@ -163,10 +163,10 @@ vim.keymap.set({ "i" }, "<C-_>",
          function()
             require("fzf-lua").live_grep({ 
             complete = function(selected, opts, line, col)
-            print (line)
-            print (col)
-            print (unpack(selected))
-            print (unpack(opts))
+            -- print (line)
+            -- print (col)
+            -- print (unpack(selected))
+            -- print (unpack(opts))
             return  line:sub(0, col - 1) .. require'fzf-lua'.path.entry_to_file(selected[1]).path .. line:sub(col  , line:len() ), #line
         end
 
