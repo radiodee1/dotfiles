@@ -83,4 +83,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("c", "<Up>", "<C-p>", opts)
 
 -- Control-"/" : use this to start path completion -- 
-keymap("i", "<C-_>", "<C-x><C-f>", opts)
+-- keymap("i", "<C-_>", "<C-x><C-f>", opts)

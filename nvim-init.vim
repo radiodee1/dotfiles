@@ -73,6 +73,7 @@ Plug 'radiodee1/pic-show.nvim'
 "Plug '~/workspace/pic-show.nvim'
 
 
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 
 call plug#end()
 
@@ -140,6 +141,8 @@ require "godot"
 -- 
 require "commands"
 
+require "filepaths"
+
 -- navic stuff --
 local navic = require("nvim-navic")
 
@@ -156,6 +159,21 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
+vim.keymap.set({ "i" }, "<C-_>",
+         function()
+            require("fzf-lua").live_grep({ 
+            complete = function(selected, opts, line, col)
+            print (line)
+            print (col)
+            print (unpack(selected))
+            print (unpack(opts))
+            return  line:sub(0, col - 1) .. require'fzf-lua'.path.entry_to_file(selected[1]).path .. line:sub(col  , line:len() ), #line
+        end
+
+            })
+          end
+    , {}) 
+    
 EOF
 
 set completeopt=menu,menuone,noselect
@@ -169,6 +187,8 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+
+" inoremap <c-x><c-f> <cmd>lua require("fzf-lua").complete_path()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "" cmp
