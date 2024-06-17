@@ -159,10 +159,11 @@ td,
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px, solid, white ;
+  border: 1px, solid, Black ;
 }
 th, tr, td {
-    padding: 16px
+    padding: 16px;
+    color: #000000;
 }
 html {
   font-family: 'PT Sans', sans-serif;
@@ -186,14 +187,14 @@ html {
   margin: 1em;
 }
 body {
-  background-color: #3c3836;    /**/
+  background-color: White;    /**/
   margin: 0 auto;
   max-width: 23cm;
-  border: 1pt solid #a89984;    /**/
+  border: 1pt solid #Brown;    /**/
   padding: 1em;
 }
 code {
-  background-color: #282828;    /**/
+  background-color: #83a598;    /**/
   padding: 2px;
 }
 a {
@@ -206,22 +207,22 @@ a:hover {
   color: #d65d03;               /**/
 }
 h1 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 h2 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 h3 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 h4 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 h5 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 h6 {
-  color: #ffffff;               /**/
+  color: #000000;               /**/
 }
 pre {
   background-color: #3c3836;   /**/
@@ -318,4 +319,9 @@ h6 {
 }
 p {
     color: Black;
+}
+li,
+ol,
+ul {
+    color: #000000;
 }
