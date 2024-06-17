@@ -34,6 +34,7 @@ UNDERLINE="_"
 IN=$@
 
 LIST=""
+FLAG_MIXED=0
 
 for i in $IN;
 do 
@@ -45,13 +46,22 @@ do
     elif [ "${i: -3}" == ".md" ]; then
         echo 'add to list'
         LIST="${i} $LIST"
+    else 
+        echo "mixed input"
+        FLAG_MIXED=1
     fi
     
 done
 
-echo $LIST "<<<"
+#echo $LIST "<<<"
 
 if [ "${LIST}" != "" ]; then
+
+    if [ "${FLAG_MIXED}" == '1' ]; then
+        echo "check for mixed input"
+        exit
+    fi 
+
     nvim $LIST
 
     for l in $LIST;
