@@ -38,7 +38,7 @@ FLAG_MIXED=0
 
 for i in $IN;
 do 
-    echo $i
+    #echo $i
      if [ "${i: -8}" == ".md.html" ]; then
         echo 'do not edit html!'
         #LIST="${i:0:-5} $LIST"
@@ -47,7 +47,7 @@ do
         echo 'add to list'
         LIST="${i} $LIST"
     else 
-        echo "mixed input"
+        #echo "mixed input"
         FLAG_MIXED=1
     fi
     
