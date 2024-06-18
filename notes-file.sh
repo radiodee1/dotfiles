@@ -77,12 +77,15 @@ DATE=$(date '+%Y-%m-%d')
 
 NAME="${DATE}_${NAME}.md"
 
+HEADING="# ${NAME}\n\n"
+
 NAME="$HOME/Documents/vault/${NAME}"
 
 echo $NAME
 
 if [ -d "$HOME/Documents/vault/" ]; then
     touch $NAME
+    echo -e $HEADING > $NAME
     nvim $NAME
     html_from_md $NAME
 fi
