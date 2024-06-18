@@ -163,8 +163,11 @@ vim.keymap.set({ "i" }, "<C-_>",
          function()
             require("fzf-lua").live_grep({ 
             complete = function(selected, opts, line, col)
-            -- print (line)
-            -- print (col)
+            local long_path = require'fzf-lua'.path.entry_to_file(selected[1]).path 
+            local filename =  vim.fn.expand("%") 
+            if (line == "" and filename:sub(-3, filename:len()) == ".md" ) then
+                return "[" .. long_path .. "](" .. long_path .. ")"
+            end 
             -- print (unpack(selected))
             -- print (unpack(opts))
             return  line:sub(0, col - 1) .. require'fzf-lua'.path.entry_to_file(selected[1]).path .. line:sub(col  , line:len() ), #line
