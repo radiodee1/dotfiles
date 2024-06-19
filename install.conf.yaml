@@ -24,6 +24,7 @@
     ~/.config/nvim/lua/godot.lua: nvim-lua-godot.lua 
     ~/.config/nvim/lua/commands.lua: nvim-lua-commands.lua
     ~/.config/nvim/lua/filepaths.lua: nvim-lua-filepaths.lua
+    ~/.config/nvim/vault.txt: nvim-vault.txt 
     ~/.config/nvim/md.css: nvim-md.css
     ~/.figlet.txt: figlet.txt 
     ~/.bashrc.copy.txt: bashrc
