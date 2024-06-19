@@ -42,7 +42,8 @@
     ~/.local/share/applications/awesome-wm-logout.desktop: awesome-wm-logout.desktop
     ~/.local/share/applications/Godot.desktop: Godot.desktop
     ~/.local/share/applications/neovim-godot-launcher.desktop: neovim-godot-launcher.desktop
-    ~/bin/nf: notes-file.sh  
+    ~/bin/nf: notes-file.sh 
+    ~/bin/nx: notes-fix.sh 
 
 
 - shell:
