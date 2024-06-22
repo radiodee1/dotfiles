@@ -1,3 +1,11 @@
+html_from_md () {
+    NAME=$1
+
+    CSS=md.css 
+    pandoc -o "$NAME.html" -s -c $CSS "$NAME" 
+    sed -i  's/.md\"/.md.html\"/g' "$NAME.html" 
+}
+
 
 LOCATION=""
 NUM=0
@@ -38,6 +46,7 @@ if [ $# -ge 2 ]; then
                 fi
             fi
         done
+        html_from_md "$LOCATION"
     fi
 
 fi
