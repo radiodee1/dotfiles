@@ -71,6 +71,9 @@ if [ "${LIST}" != "" ]; then
     exit
 fi
 
+
+VAULT_NAME="$(cat $HOME/.config/nvim/vault.txt)" 
+
 NAME="${IN//$SPACE/$UNDERLINE}"
 
 DATE=$(date '+%Y-%m-%d')
@@ -79,11 +82,11 @@ NAME="${DATE}_${NAME}.md"
 
 HEADING="# ${NAME}\n\n"
 
-NAME="$HOME/Documents/vault/${NAME}"
+NAME="$HOME/${VAULT_NAME}/${NAME}"
 
 echo $NAME
 
-if [ -d "$HOME/Documents/vault/" ]; then
+if [ -d "$HOME/${VAULT_NAME}/" ]; then
     touch $NAME
     echo -e $HEADING > $NAME
     nvim $NAME

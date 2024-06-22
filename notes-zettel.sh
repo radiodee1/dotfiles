@@ -26,6 +26,19 @@ fi
 
 if [ $# -ge 2 ]; then
     LOCATION=$1
+    if [ -f $LOCATION ]; then
+        echo "found $LOCATION"
+        if [ ${LOCATION: -3} == ".md" ]; then
+            echo "ok md file $LOCATION"
+        else
+            echo "bad md file $LOCATION"
+            exit 
+        fi
+    else
+        echo "not found $LOCATION"
+        exit 
+    fi
+
     echo 'two or more command line arguments'
     NUM=$(echo $@ | wc -w)
     echo $NUM
