@@ -44,7 +44,7 @@
     ~/.local/share/applications/neovim-godot-launcher.desktop: neovim-godot-launcher.desktop
     ~/bin/nf: notes-file.sh 
     ~/bin/nx: notes-fix.sh 
-
+    ~/bin/nz: notes-zettel.sh 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
