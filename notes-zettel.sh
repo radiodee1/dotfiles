@@ -55,7 +55,7 @@ if [ $# -ge 2 ]; then
             if [ -f $LINE ]; then   
                 if [ ${LINE: -3} == ".md" ]; then
                     echo $i $LOCATION $LINE $NOTREADY
-                    echo -e "[$LINE]($LINE)\n\n" >> $LOCATION 
+                    echo -e "- [$LINE]($LINE)\n\n" >> $LOCATION 
                 fi
             fi
         done

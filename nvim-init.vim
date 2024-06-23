@@ -166,11 +166,11 @@ vim.keymap.set({ "i" }, "<C-_>",
             local long_path = require'fzf-lua'.path.entry_to_file(selected[1]).path 
             local filename =  vim.fn.expand("%") 
             if (line == "" and filename:sub(-3, filename:len()) == ".md" ) then
-                return "[" .. long_path .. "](" .. long_path .. ")"
+                return "[" .. long_path .. "](" .. long_path .. ")" , long_path:len() * 2 + 4 
             end 
             -- print (unpack(selected))
             -- print (unpack(opts))
-            return  line:sub(0, col - 1) .. require'fzf-lua'.path.entry_to_file(selected[1]).path .. line:sub(col  , line:len() ), #line
+            return  line:sub(0, col - 1) .. require'fzf-lua'.path.entry_to_file(selected[1]).path .. line:sub(col  , line:len() ), line:len() + long_path:len()
         end
 
             })
