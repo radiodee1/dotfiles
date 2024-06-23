@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 html_from_md () {
     NAME=$1
 
