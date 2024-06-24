@@ -44,7 +44,7 @@ do
     SPACE=" "
     UNDERLINE="_"
 
-    if [ $EXIT == 1 ]; then
+    if [ $EXIT == 1 ] && [ $BASENAME != "README.md" ] ; then
         echo "must modify filename"
         NEWDATERAW=$(stat -c %y "$i")
         NEWDATE="${NEWDATERAW:0:10}"
@@ -58,10 +58,15 @@ do
         html_from_md "${VAULT}${NEWDATE}_${NAME}"
 
         if [ -f "${VAULT}${BASENAME}.html" ]; then
-            echo "rm ${VAULT}${BASENAME}.html"
+            echo "??  rm ${VAULT}${BASENAME}.html  ??"
             rm "${VAULT}${BASENAME}.html"
         fi 
 
+    fi
+
+    if [  ! -f "${VAULT}${BASENAME}.html" ]; then
+        echo "new name..."
+        html_from_md "${VAULT}${BASENAME}"
     fi
 
 done
