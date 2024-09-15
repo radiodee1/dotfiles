@@ -1,12 +1,22 @@
+#!/bin/bash
+
+
+
 
 if [ $# -ne '1' ]; then
     echo "enter password as first (only) argument"
-    exit 
+    echo "or here at prompt... You will also then be prompted for"
+    echo "sudo password."
+    read -sp "Password: " passvar 
+    PASS=$passvar
+    echo ""
+else
+    PASS=$1 
 fi 
 
 MYNAME="$(id -u -n)"
 MYUID="$(id -u)"
-PASS=$1 
+#PASS=$1 
 IPADDR="$(cat ./smb-ip.txt)"
 echo $PASS $MYUID $MYNAME $HOME $IPADDR
 
