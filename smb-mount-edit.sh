@@ -4,9 +4,10 @@
 
 
 if [ $# -ne '1' ]; then
-    echo "enter password as first (only) argument"
-    echo "or here at prompt... You will also then be prompted for"
-    echo "sudo password."
+    echo "Enter password for remote FS as first (only) argument"
+    echo "or here at prompt. You will also then be prompted for"
+    echo "sudo password if necessary."
+
     read -sp "Password: " passvar 
     PASS=$passvar
     echo ""
