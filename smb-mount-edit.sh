@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 if [ $# -ne '1' ]; then
     echo "Enter password for remote FS as first (only) argument"
     echo "or here at prompt. You will also then be prompted for"
