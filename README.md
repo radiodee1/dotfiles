@@ -6,12 +6,12 @@ https://www.elliotdenolf.com/posts/bootstrap-your-dotfiles-with-dotbot
 
 ## For Powerline install:
 
-```
+```bash
 $ sudo apt install powerline fonts-powerline
 ```
 put this in your `.bashrc` file after installing powerline:
 
-```
+```bash
 # Powerline configuration
 if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
   powerline-daemon -q
@@ -22,7 +22,7 @@ fi
 ```
 ## For Fonts: 
 
-```
+```bash
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.zip
 ## or ##
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
@@ -38,13 +38,13 @@ fc-list | grep UbuntuNerd
 
 ## For ssh directory:
 
-```
+```bash
 chmod 600 ~/.ssh/*
 chmod 700 ~/.ssh/ 
 ```
 
 ## For awesome:
-```
+```bash
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy
 
 
@@ -58,13 +58,13 @@ all widgets require the awesome-wm-widgets github repo cloned into the '.config/
 
 The neovim project can be found on line here. At the time of this writing the Ubuntu repo has neovim 0.7.2-8. This is not very recent, so some plugins will not work. Use a version of neovim above 0.8 or 0.9 from the github site.
 
-```
+```bash
 https://github.com/neovim/neovim
 ```
 
 On Ubuntu snaps can make installing nvim very easy. Use this command.
 
-```
+```bash
 ## from snap ##
 
 $ sudo snap install nvim 
@@ -73,7 +73,7 @@ $ sudo snap install nvim
 
 Or download a appimage from the internet and make sure libfuse2 is installed. Put the appimage at `/usr/local/bin/`. You may need to run these commands.
 
-```
+```bash
 ## from appimage ##
 
 $ sudo chmod a+x nvim.appimage 
@@ -82,7 +82,7 @@ $ sudo ln -s nvim.appimage nvim
 ```
 You can build the package from source. This option is not so difficult. You will need to install some of the following packages.
 
-```
+```bash
 ## from source ##
 
 $ sudo apt install build-essential cmake gettext
@@ -91,7 +91,7 @@ $ sudo apt install build-essential cmake gettext
 
 The custom Markdown and MarkdownInPlace commands use pandoc. To use pandoc you must install it.
 
-```
+```bash
 $ sudo apt install pandoc 
 ```
 

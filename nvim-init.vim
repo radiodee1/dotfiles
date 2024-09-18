@@ -75,6 +75,8 @@ Plug 'radiodee1/pic-show.nvim'
 
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 
+Plug 'OXY2DEV/markview.nvim'
+
 call plug#end()
 
 " colorscheme dracula
@@ -84,7 +86,7 @@ call plug#end()
 colorscheme monokai_pro
 
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
+" let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
 
 
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
