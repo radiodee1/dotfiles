@@ -196,25 +196,12 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fp <cmd>lua require("fzf-lua").complete_path()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""
-"" cmp
-""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""
-
-" set completeopt=menu,menuone,noselect
-" set completeopt=menu,preview 
 
 set signcolumn=yes
 
 " TO INSTALL VIM-PLUG
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-" INSTALL python coc support
-" :CocInstall coc-pyright 
-" :CocInstall coc-tsserver
-" :CocInstall coc-lists
-" :CocInstall coc-java 
 
 " INSTALL lua and python on maven lsp
 " :MavenInstall lua-language-server
