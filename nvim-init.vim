@@ -193,7 +193,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
-nnoremap <leader>fp <cmd>lua require("fzf-lua").complete_path()<cr>
+" nnoremap <leader>fp <cmd>lua require("fzf-lua").complete_path()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 
