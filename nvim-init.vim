@@ -161,7 +161,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
-vim.keymap.set({ "i" }, "<C-_>",
+vim.keymap.set({ "n" }, "<leader>fl",
          function()
             require("fzf-lua").live_grep({ 
             complete = function(selected, opts, line, col)
@@ -193,7 +193,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
-" inoremap <c-x><c-f> <cmd>lua require("fzf-lua").complete_path()<cr>
+nnoremap <leader>fp <cmd>lua require("fzf-lua").complete_path()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""
 "" cmp
@@ -219,3 +219,5 @@ set signcolumn=yes
 " INSTALL lua and python on maven lsp
 " :MavenInstall lua-language-server
 " :MavenInstall pyright 
+
+

@@ -110,3 +110,5 @@ The NAS is a pretty specific piece of hardware. The scripts here are not for eve
 - Run the `smb-mount-edit.sh` script with one parameter, the smb password. The script will ask you for your sudo password. Then the script launches the mount process. Do not run this script as super user!
 
 - Unmount the smb share with the `smb-umount-edit.sh` script. It takes no parameters.
+
+
