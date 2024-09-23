@@ -61,6 +61,7 @@ if [ $# -ge 2 ]; then
                 fi
             fi
         done
+        nvim "$LOCATION"
         html_from_md "$LOCATION"
     fi
 
