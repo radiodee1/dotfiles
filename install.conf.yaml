@@ -52,4 +52,4 @@
   - [cp ./config.i3.config ~/.config/i3/config.copy.kwin]
   - [echo "install xdotool for awesome-wm-logout.desktop"]
   - [cd ~/.config/awesome/ && git clone https://github.com/streetturtle/awesome-wm-widgets.git ]
-  - [cp nvim-md.css ~/Documents/vault/md.css ]
+  - [cp nvim-md.css ~/$(cat nvim-vault.txt)/md.css ]
