@@ -38,6 +38,7 @@
     ~/.config/polybar/launch.sh: polybar-launch.sh 
     ~/.config/awesome/dave_awesome_lua/rc.lua: awesome-rc.lua 
     ~/.config/awesome/dave_awesome_lua/theme.lua: awesome-theme.lua
+    ~/.config/awesome/dave_awesome_lua/rc.lua.template: awesome-rc.lua.template
     ~/.config/i3/config: i3-config
     ~/.local/share/applications/neovim-vim-launcher.desktop: neovim-vim-launcher.desktop
     ~/.local/share/applications/awesome-wm-logout.desktop: awesome-wm-logout.desktop
