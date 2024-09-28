@@ -12,6 +12,7 @@
     - ~/.config/polybar 
     - ~/.config/awesome
     - ~/.config/awesome/dave_awesome_lua
+    - ~/.config/awesome/themes/powerarrow-dark/
     - ~/bin 
 
 - link:
@@ -39,6 +40,7 @@
     ~/.config/awesome/dave_awesome_lua/rc.lua: awesome-rc.lua 
     ~/.config/awesome/dave_awesome_lua/theme.lua: awesome-theme.lua
     ~/.config/awesome/dave_awesome_lua/rc.lua.template: awesome-rc.lua.template
+    ~/.config/awesome/themes/powerarrow-dark/theme.lua: awesome-themes-powerarrow-dark-theme.lua 
     ~/.config/i3/config: i3-config
     ~/.local/share/applications/neovim-vim-launcher.desktop: neovim-vim-launcher.desktop
     ~/.local/share/applications/awesome-wm-logout.desktop: awesome-wm-logout.desktop
