@@ -319,6 +319,12 @@ globalkeys = mytable.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
+    awful.key({ altkey,           }, "Tab",
+        function ()
+            awful.client.focus.byidx(-1)
+        end,
+        {description = "focus previous by index", group = "client"}
+    ),
 
     -- By-direction client focus
     awful.key({ modkey }, "j",
