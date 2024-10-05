@@ -14,12 +14,14 @@
     - ~/.config/awesome/dave_awesome_lua
     - ~/.config/awesome/themes/powerarrow-dark/
     - ~/bin 
+    - ~/.config/mpd/
 
 - link:
     ~/.vimrc: vimrc
     ~/.config/nvim/init.vim: nvim-init.vim
     ~/.bashrc: bashrc
     ~/.vim/autoload/plug.vim: plug.vim
+    ~/.config/mpd/mpd.conf: mpd-mpd.conf 
     ~/.config/nvim/lua/keymap.lua : nvim-lua-keymap.lua
     ~/.config/nvim/lua/lsp.lua: nvim-lua-lsp.lua 
     ~/.config/nvim/lua/tree.lua: nvim-lua-tree.lua 
