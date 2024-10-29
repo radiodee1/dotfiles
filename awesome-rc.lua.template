@@ -890,6 +890,6 @@ awful.spawn.with_shell("nitrogen --restore")
 -- awful.util.spawn("/bin/nm-applet")
 awful.spawn.with_shell("xcape -e 'Super_L=Super_L|space'")
 awful.spawn.with_shell("/bin/nm-applet")
-
+awful.spawn.with_shell("lxpolkit")
 -- no screen blanking
 awful.spawn.with_shell("xset s off && xset -dpms && xset s noblank ")
