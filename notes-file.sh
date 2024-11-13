@@ -92,6 +92,13 @@ if [ -d "$HOME/${VAULT_NAME}/" ]; then
     touch $NAME
     echo -e $HEADING > $NAME
     nvim $NAME
+    echo -e "" >> $NAME
+
+    for var in "$@"
+    do 
+        echo -e "#$var" >> $NAME
+    done
+
     html_from_md $NAME
 fi
 
