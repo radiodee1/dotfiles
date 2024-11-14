@@ -4,6 +4,7 @@ set number
 "set clipboard=unnamed
 set hidden 
 
+set scrolloff=30
 
 call plug#begin("~/.vim/plugged")
 Plug 'nvim-lua/plenary.nvim'
