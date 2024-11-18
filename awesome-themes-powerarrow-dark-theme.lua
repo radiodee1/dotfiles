@@ -104,6 +104,7 @@ local clock = awful.widget.watch(
 
 -- Calendar
 theme.cal = lain.widget.cal({
+    week_start = 1,
     attach_to = { clock },
     notification_preset = {
         font = "Terminus 10",
