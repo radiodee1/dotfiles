@@ -107,7 +107,8 @@ theme.cal = lain.widget.cal({
     week_start = 1,
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        -- font = "Terminus 10",
+        font = "Ubuntu Mono 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
