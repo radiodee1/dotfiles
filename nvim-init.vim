@@ -76,7 +76,7 @@ Plug 'radiodee1/pic-show.nvim'
 
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 
-"Plug 'OXY2DEV/markview.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 
 call plug#end()
 

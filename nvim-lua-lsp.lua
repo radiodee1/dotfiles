@@ -259,3 +259,9 @@ require('lspconfig')['rust_analyzer'].setup{
       })
     })
 
+    local cmp = require('cmp')
+    cmp.setup({
+        sources = cmp.config.sources({
+            { name = 'render-markdown' },
+        }),
+    })
