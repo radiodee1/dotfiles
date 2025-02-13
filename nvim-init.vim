@@ -179,7 +179,10 @@ lspconfig.volar.setup {
 
 vim.keymap.set({ "n" }, "<leader>fl",
          function()
-            require("fzf-lua").live_grep({ 
+            require("fzf-lua").live_grep({
+
+            fzf_opts = { ["--multi"] = false },
+
             complete = function(selected, opts, line, col)
             local long_path = require'fzf-lua'.path.entry_to_file(selected[1]).path 
             local filename =  vim.fn.expand("%") 
