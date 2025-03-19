@@ -15,5 +15,5 @@
 
 /mnt/tera/home	/home	none 	defaults,bind	0	0
 
-/mnt/tera/docker	/var/lib/docker	none	defaults,bind	0	0
+#/mnt/tera/docker	/var/lib/docker	none	defaults,bind	0	0
 
