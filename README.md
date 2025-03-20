@@ -135,3 +135,12 @@ rm -fr google-chrome
 ```
 
 Then you need to log in to your account on Google Chrome again.
+
+## Music mpd
+
+```bash
+# try this...
+touch .config/mpd/sticker.sql
+
+```
+A `mpd.conf` file is included in the dotfiles repo.
