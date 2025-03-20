@@ -114,3 +114,13 @@ The NAS is a pretty specific piece of hardware. The scripts here are not for eve
 ## Extra Considerations
 
 Set up kitty as gnome-terminal.
+
+- Install kitty
+- set as alternative.
+- choose.
+
+```bash 
+sudo apt install kitty
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 50
+sudo update-alternatives --config x-terminal-emulator
+```
