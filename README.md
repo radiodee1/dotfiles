@@ -111,4 +111,6 @@ The NAS is a pretty specific piece of hardware. The scripts here are not for eve
 
 - Unmount the smb share with the `smb-umount-edit.sh` script. It takes no parameters.
 
+## Extra Considerations
 
+Set up kitty as gnome-terminal.
