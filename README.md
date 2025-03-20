@@ -124,3 +124,14 @@ sudo apt install kitty
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 50
 sudo update-alternatives --config x-terminal-emulator
 ```
+
+## Google Chrome
+
+Reset Chrome for awesome wm 
+
+```bash
+cd ~/.config/
+rm -fr google-chrome
+```
+
+Then you need to log in to your account on Google Chrome again.
