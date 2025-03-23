@@ -92,7 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vim='nvim --listen /tmp/nvim.pipe'
-alias zellij='zellij options --disable-mouse-mode'
+# alias zellij='zellij options --disable-mouse-mode'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -119,21 +119,28 @@ if ! shopt -oq posix; then
 fi
 
 # Powerline configuration
-if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/bash/powerline.sh
-fi
+#if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+#  powerline-daemon -q
+#  POWERLINE_BASH_CONTINUATION=1
+#  POWERLINE_BASH_SELECT=1
+#  source /usr/share/powerline/bindings/bash/powerline.sh
+#fi
 
 if [ -f ~/bin/bashrc.api_key.sh ]; then
     . ~/bin/bashrc.api_key.sh
 fi
 
-
-export PATH=$HOME/.local/bin:$PATH
+if [[ ! -v PATH ]]; then    
+    source /etc/environment
+    export PATH=$HOME/.local/bin:$PATH
+fi 
 
 shopt -s cdable_vars
-doc=~/Documents 
-down=~/Downloads 
+pass=~/Documents/html_other/passwords 
+pas=~/Documents/html_other/passwords 
+passwords=~/Documents/html_other/passwords 
+
+
+
+eval "$(starship init bash)"
 
