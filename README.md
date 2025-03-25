@@ -144,3 +144,8 @@ touch .config/mpd/sticker.sql
 
 ```
 A `mpd.conf` file is included in the dotfiles repo.
+
+## Node 
+
+look into `nvm`, which stands for `node version manager`. https://github.com/nvm-sh/nvm 
+
