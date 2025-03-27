@@ -45,7 +45,7 @@ chmod 700 ~/.ssh/
 
 ## For awesome:
 ```bash
-$ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit 
+$ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit lxappearance
 
 
 ```
