@@ -15,6 +15,7 @@
     - ~/.config/awesome/themes/powerarrow-dark/
     - ~/bin 
     - ~/.config/mpd/
+    - ~/.config/sway
 
 - link:
     ~/.vimrc: vimrc
@@ -50,7 +51,8 @@
     ~/.local/share/applications/neovim-godot-launcher.desktop: neovim-godot-launcher.desktop
     ~/bin/nf: notes-file.sh 
     ~/bin/nx: notes-fix.sh 
-    ~/bin/nz: notes-zettel.sh 
+    ~/bin/nz: notes-zettel.sh
+    ~/.config/sway/config: sway-config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

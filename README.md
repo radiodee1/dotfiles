@@ -47,7 +47,8 @@ chmod 700 ~/.ssh/
 ```bash
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit lxappearance
 
-
+## for sway/wayland
+$ sudo apt install sway waybar 
 ```
 
 Note: pulseaudio may need another plugin-type package.
