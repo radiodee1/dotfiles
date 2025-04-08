@@ -16,6 +16,7 @@
     - ~/bin 
     - ~/.config/mpd/
     - ~/.config/sway
+    - ~/.config/waybar
 
 - link:
     ~/.vimrc: vimrc
@@ -53,6 +54,7 @@
     ~/bin/nx: notes-fix.sh 
     ~/bin/nz: notes-zettel.sh
     ~/.config/sway/config: sway-config
+    ~/.config/waybar/config: waybar-config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

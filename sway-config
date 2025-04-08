@@ -216,7 +216,8 @@ bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solari
 #exec_always --no-startup-id /usr/bin/xcape -e 'Super_L=Super_L|space'
 
 #Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh &
+#exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec  waybar
 
 include /etc/sway/config.d/*
 
