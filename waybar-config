@@ -12,5 +12,14 @@
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
-    }
+    },
+    "sway/workspaces": { // wait for trixie
+	"persistent-workspaces": {
+        "1": [],
+        "2": [],
+		"3": [],  
+		"4": [],  
+		"5": []  
+	}
+}
 }
