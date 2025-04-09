@@ -209,6 +209,12 @@ gaps inner 4
 gaps outer 4  
 
 
+assign [app_id="thunderbird"] workspace 1 
+
+assign [class="Google-chrome"] workspace 2 
+
+assign [app_id="org.gnome.Nautilus"] workspace 5  
+
 bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi -icon-theme 'Papirus' -show-icons" 
 
 #exec_always --no-startup-id /usr/bin/compton -b
