@@ -150,3 +150,10 @@ A `mpd.conf` file is included in the dotfiles repo.
 
 look into `nvm`, which stands for `node version manager`. https://github.com/nvm-sh/nvm 
 
+## lxpolkit 
+
+Add this to .config/sway/config 
+
+```
+exec_always bash -c "xhost +SI:localuser:root"
+```

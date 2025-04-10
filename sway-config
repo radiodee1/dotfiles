@@ -8,7 +8,12 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# include ~/.config/sway/env_wayland
 
+set $DISPLAY ":0"
+set $WAYLAND_DISPLAY "wayland-0"
+
+exec_always bash -c "xhost +SI:localuser:root" 
 
 input type:keyboard {
     xkb_layout us 
@@ -220,7 +225,7 @@ bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solari
 #exec_always --no-startup-id /usr/bin/compton -b
 exec_always --no-startup-id /usr/bin/swaybg -i ~/Pictures/pexels-pixabay-531880.jpg  
 #exec_always --no-startup-id /usr/bin/xcape -e 'Super_L=Super_L|space'
-
+exec_always --no-startup-id lxpolkit 
 #Polybar
 #exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec  waybar
