@@ -135,6 +135,9 @@ if [[ ! -v PATH ]]; then
     export PATH=$HOME/.local/bin:$PATH
 fi 
 
+export TERMINAL='x-terminal-emulator'
+export SWAYSOCK=$( lsof /run/user/1000/sway-ipc.* 2>/dev/null | awk '{print $9}' | tail -n +2 | sort | uniq )
+
 shopt -s cdable_vars
 pass=~/Documents/html_other/passwords 
 pas=~/Documents/html_other/passwords 
@@ -144,3 +147,7 @@ passwords=~/Documents/html_other/passwords
 
 eval "$(starship init bash)"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
