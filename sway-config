@@ -35,7 +35,8 @@ font pango:monospace 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex --autostart --environment i3
+
+#exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -174,9 +175,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'swaymsg exit'"
+bindsym $mod+Shift+q exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your wayland session.' -B 'Yes, exit sway' 'swaymsg exit'"
 
-bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'swaymsg exit'"
+bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your wayland session.' -B 'Yes, exit sway' 'swaymsg exit'"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -215,6 +216,8 @@ default_border pixel 3
 gaps inner 4 
 gaps outer 4  
 
+for_window [class=".*"] focus 
+for_window [app_id=".*"] focus
 
 assign [app_id="thunderbird"] workspace 1 
 
