@@ -219,11 +219,11 @@ gaps outer 4
 for_window [class=".*"] focus 
 for_window [app_id=".*"] focus
 
-assign [app_id="thunderbird"] workspace 1 
+assign [app_id="thunderbird"] workspace $ws1 
 
-assign [class="Google-chrome"] workspace 2 
+assign [class="Google-chrome"] workspace $ws2 
 
-assign [app_id="org.gnome.Nautilus"] workspace 5  
+assign [app_id="org.gnome.Nautilus"] workspace $ws5  
 
 bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi -icon-theme 'Papirus' -show-icons" 
 
