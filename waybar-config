@@ -142,7 +142,7 @@
 	"disk": {
 		"interval": 5,
 		"format": "Disk {percentage_used:2}%",
-		"path": "/"
+		"path": "/mnt/tera"
 	},
 	"tray": {
 		"icon-size": 20,
