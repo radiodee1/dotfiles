@@ -1,5 +1,5 @@
 * {
-	font-size: 20px;
+	font-size: 14px;
 	font-family: UbuntuMono Nerd Font;
 }
 
@@ -70,5 +70,12 @@ window#waybar {
 #cpu,
 #battery,
 #disk {
-	padding: 0 10px;
+	padding: 0 20px;
+}
+
+#custom-left-arrow-dark,
+#custom-right-arrow-dark,
+#custom-left-arrow-light,
+#custom-right-arrow-light {
+    font-size: 25px;
 }
