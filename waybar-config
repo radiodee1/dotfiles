@@ -88,7 +88,6 @@
 		"disable-scroll": true,
 		"format": "{name}"
 	},
-
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -146,6 +145,7 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 14
+		"icon-size": 20,
+        "spacing": 20
 	}
 }
