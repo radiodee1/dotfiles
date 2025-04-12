@@ -55,6 +55,7 @@
     ~/bin/nz: notes-zettel.sh
     ~/.config/sway/config: sway-config
     ~/.config/waybar/config: waybar-config
+    ~/.config/waybar/style.css: waybar-style.css
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
