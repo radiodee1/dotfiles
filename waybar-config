@@ -148,4 +148,16 @@
 		"icon-size": 20,
         "spacing": 20
 	}
+,
+    "sway/workspaces": { // wait for trixie
+	"persistent-workspaces": {
+        "1": [],
+        "2": [],
+		"3": [],  
+		"4": [],  
+		"5": []  
+	}
+}
+
+
 }
