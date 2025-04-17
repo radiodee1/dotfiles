@@ -48,7 +48,9 @@ chmod 700 ~/.ssh/
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit lxappearance
 
 ## for sway/wayland
-$ sudo apt install sway waybar 
+$ sudo apt install sway waybar
+$ sudo apt install pipx 
+$ sudo apt install sway-notification-center  
 ```
 
 Note: pulseaudio may need another plugin-type package.
