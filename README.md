@@ -159,3 +159,9 @@ Add this to .config/sway/config
 ```
 exec_always bash -c "xhost +SI:localuser:root"
 ```
+
+## Davinci Resolve
+
+```
+sudo apt install ocl-icd-opencl-dev 
+```
