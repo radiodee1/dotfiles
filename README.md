@@ -163,5 +163,12 @@ exec_always bash -c "xhost +SI:localuser:root"
 ## Davinci Resolve
 
 ```
-sudo apt install ocl-icd-opencl-dev 
+sudo apt install ocl-icd-opencl-dev ocl-icd-dev mesa-opencl-icd pocl-opencl-icd  
+```
+
+## Some grub commands 
+
+```
+sudo grub-install ## <-- this command can take arguments
+sudo update-grub
 ```
