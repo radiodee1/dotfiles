@@ -47,6 +47,9 @@ chmod 700 ~/.ssh/
 ```bash
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit lxappearance
 
+## for all WM 
+$ sudo apt install network-manager-applet
+
 ## for sway/wayland
 $ sudo apt install sway waybar
 $ sudo apt install pipx 
