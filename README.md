@@ -74,7 +74,7 @@ On Ubuntu snaps can make installing nvim very easy. Use this command.
 ## from snap ##
 
 $ sudo snap install nvim 
-
+$ sudo apt install fzf
 ```
 
 Or download a appimage from the internet and make sure libfuse2 is installed. Put the appimage at `/usr/local/bin/`. You may need to run these commands.
