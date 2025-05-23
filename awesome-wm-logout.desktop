@@ -1,4 +1,5 @@
 [Desktop Entry]
-Exec=xdotool key Super+Shift+q
+#Exec=xdotool key Super+Shift+q
+Exec=wtype -M win -M shift -k q
 Name=logout-window-manager
 Type=Application

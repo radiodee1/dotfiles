@@ -53,7 +53,7 @@ $ sudo apt install network-manager-applet
 ## for sway/wayland
 $ sudo apt install sway waybar
 $ sudo apt install pipx 
-$ sudo apt install sway-notification-center  
+$ sudo apt install sway-notification-center wtype  
 ```
 
 Note: pulseaudio may need another plugin-type package.
