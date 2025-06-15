@@ -78,6 +78,8 @@ Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 
+Plug 'jghauser/follow-md-links.nvim'
+
 call plug#end()
 
 " colorscheme dracula
@@ -197,7 +199,10 @@ vim.keymap.set({ "n" }, "<leader>fl",
             })
           end
     , {}) 
-    
+  
+-- for follow-md-links
+vim.keymap.set('n', '<bs>', ':edit #<cr>', { silent = true })
+
 EOF
 
 set completeopt=menu,menuone,noselect
@@ -211,6 +216,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" init.vim markdown follow-md-links
+" autocmd FileType markdown nnoremap <script> <CR> :FollowMarkdownLink<CR>
+" autocmd FileType markdown nnoremap <script> <BS> :PreviousMarkdownBuffer<CR>
 
 " nnoremap <leader>fp <cmd>lua require("fzf-lua").complete_path()<cr>
 
