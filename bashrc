@@ -93,7 +93,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias vim='nvim --listen /tmp/nvim.pipe'
 # alias zellij='zellij options --disable-mouse-mode'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -132,8 +131,9 @@ fi
 
 if [[ ! -v PATH ]]; then    
     source /etc/environment
-    export PATH=$HOME/.local/bin:$PATH
 fi 
+
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 export TERMINAL='x-terminal-emulator'
 export SWAYSOCK=$( lsof /run/user/1000/sway-ipc.* 2>/dev/null | awk '{print $9}' | tail -n +2 | sort | uniq )
@@ -147,7 +147,10 @@ passwords=~/Documents/html_other/passwords
 
 eval "$(starship init bash)"
 
+xhost +SI:localuser:root > /dev/null 2>&1
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(zellij setup --generate-auto-start bash)"

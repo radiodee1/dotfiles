@@ -58,7 +58,9 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec swaymsg "workspace 3; exec /usr/bin/kitty  -c zellij; workspace 4; exec /usr/bin/kitty"
 bindsym $mod+Return exec swaymsg "workspace 3; exec /usr/bin/x-terminal-emulator; workspace 4; exec /usr/bin/x-terminal-emulator"
+
 
 bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
