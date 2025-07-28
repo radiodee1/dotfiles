@@ -214,6 +214,7 @@ for_window [app_id=".*"] focus
 assign [app_id="thunderbird"] workspace $ws1 
 
 assign [class="Google-chrome"] workspace $ws2 
+assign [app_id="chrome"] workspace $ws2 
 
 assign [app_id="org.gnome.Nautilus"] workspace $ws5  
 
