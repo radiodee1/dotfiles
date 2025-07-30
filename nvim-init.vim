@@ -6,6 +6,7 @@ set hidden
 
 set scrolloff=30
 
+
 call plug#begin("~/.vim/plugged")
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
