@@ -157,6 +157,8 @@ require("lspconfig").clangd.setup {
         navic.attach(client, bufnr)
     end
 }
+
+
 -- end navic stuff --
 
 vim.api.nvim_create_autocmd("VimEnter", {
