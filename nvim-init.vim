@@ -81,6 +81,8 @@ Plug 'MeanderingProgrammer/render-markdown.nvim'
 
 Plug 'jghauser/follow-md-links.nvim'
 
+Plug 'benomahony/uv.nvim'
+
 call plug#end()
 
 " colorscheme dracula
@@ -134,6 +136,8 @@ lua require'colorizer'.setup()
 
 lua require('barbecue').setup()
 
+" lua require('uv').setup()
+
 lua <<EOF
 
 
@@ -149,14 +153,18 @@ require "commands"
 
 require "filepaths"
 
+
 -- navic stuff --
 local navic = require("nvim-navic")
 
-require("lspconfig").clangd.setup {
+vim.lsp.config( "clangd", 
+  -- require("lspconfig").clangd.setup 
+{
     on_attach = function(client, bufnr)
         navic.attach(client, bufnr)
     end
 }
+)
 
 
 -- end navic stuff --
@@ -167,18 +175,26 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
-local lspconfig = require('lspconfig')
+-- vim.lsp.config('lspconfig');
 
-lspconfig.volar.setup {
-  -- add filetypes for typescript, javascript and vue
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-  init_options = {
-    vue = {
-      -- disable hybrid mode
-      hybridMode = false,
-    },
-  },
-}
+-- local lspconfig = require('lspconfig')
+
+--[[
+vim.lsp.config('volar', 
+  -- lspconfig.volar.setup 
+    {
+      -- add filetypes for typescript, javascript and vue
+      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+      init_options = {
+        vue = {
+          -- disable hybrid mode
+          hybridMode = false,
+        },
+      },
+    }
+)
+--]]
+
 -- you must remove ts_ls setup
 -- lspconfig.ts_ls.setup {}
 

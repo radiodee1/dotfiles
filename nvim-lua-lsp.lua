@@ -19,15 +19,19 @@ local DEFAULT_SETTINGS = {
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local lspconfig = require('lspconfig')
+-- local lspconfig = require('lspconfig')
+-- local lspconfig = vim.lsp.config()
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'clangd', 'rust_analyzer', 'pyright' }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+   -- lspconfig[lsp].setup
+  vim.lsp.config( lsp, 
+  {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
   }
+  )
 end
 
 -- luasnip setup
@@ -146,15 +150,23 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['pyright'].setup{
+
+vim.lsp.config( 'pyright', 
+-- require('lspconfig')['pyright'].setup
+{
     on_attach = on_attach,
     flags = lsp_flags,
 }
+)
 -- require('lspconfig')['tsserver'].setup{
 --    on_attach = on_attach,
 --    flags = lsp_flags,
 -- }
-require('lspconfig')['rust_analyzer'].setup{
+
+
+-- require('lspconfig')['rust_analyzer'].setup
+vim.lsp.config ( 'rust_analyzer',  
+{
     on_attach = on_attach,
     flags = lsp_flags,
     -- Server-specific settings...
@@ -162,6 +174,7 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+)
 
 -- highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
 -- Set up nvim-cmp.
@@ -232,10 +245,13 @@ require('lspconfig')['rust_analyzer'].setup{
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['pyright'].setup {
+
+  vim.lsp.config( 'pyright',
+  -- require('lspconfig')['pyright'].setup 
+  {
     capabilities = capabilities
   }
-
+  )
     -- `/` cmdline setup.
     cmp.setup.cmdline('/', {
       mapping = cmp.mapping.preset.cmdline(),

@@ -10,11 +10,11 @@ au BufNewFile,BufRead *.lua setlocal nowrap
 
 lua <<EOF
 
-require'lspconfig'.lua_ls.setup {
+--require'lspconfig'.lua_ls.setup {
     -- settings = {
         -- Settings go here!
     -- }
-}
+--}
 
 EOF
 

@@ -8,7 +8,9 @@
     - ~/.config/nvim
     - ~/.vim/autoload
     - ~/.config/nvim/lua
+    - ~/.config/nvim/lsp
     - ~/.config/nvim/after/ftdetect
+    - ~/.config/nvim/after/lsp
     - ~/.config/polybar 
     - ~/.config/awesome
     - ~/.config/awesome/dave_awesome_lua
