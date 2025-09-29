@@ -101,6 +101,15 @@ The custom Markdown and MarkdownInPlace commands use pandoc. To use pandoc you m
 $ sudo apt install pandoc 
 ```
 
+Install UV. Some instructions say:
+
+```
+$ curl -LsSf https://astral.sh/uv/install.sh | sh 
+
+$ uv tool install --upgrade pynvim
+
+```
+
 ## Mounting NAS 
 
 The NAS is a pretty specific piece of hardware. The scripts here are not for everyone. Basically they are to allow me to use the NAS with little trouble. The NAS requires the root user's environment to mount and the regular user's environment to set up permissions and access, etc. Use the list below as a guide for mounting.
