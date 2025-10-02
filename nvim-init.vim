@@ -179,7 +179,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 -- local lspconfig = require('lspconfig')
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { "vue", "javascript", "typescript", "css", "html" },
+    ensure_installed = { "vue", "javascript", "typescript", "css", "html", "lua" },
     highlight = { enable = true }
     -- Other treesitter configurations
 }
@@ -188,7 +188,7 @@ vim.lsp.config('volar',
   -- lspconfig.volar.setup 
     {
       -- add filetypes for typescript, javascript and vue
-      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'vimscript', 'lua' },
       init_options = {
         vue = {
           -- disable hybrid mode
