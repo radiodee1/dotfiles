@@ -180,6 +180,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- local lspconfig = require('lspconfig')
 require('nvim-treesitter.configs').setup {
     ensure_installed = { "vue", "javascript", "typescript", "css", "html" },
+    highlight = { enable = true }
     -- Other treesitter configurations
 }
 ---[[
