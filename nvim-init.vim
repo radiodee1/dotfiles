@@ -178,8 +178,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- vim.lsp.config('lspconfig');
 
 -- local lspconfig = require('lspconfig')
-
---[[
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { "vue", "javascript", "typescript", "css", "html" },
+    -- Other treesitter configurations
+}
+---[[
 vim.lsp.config('volar', 
   -- lspconfig.volar.setup 
     {
@@ -188,7 +191,7 @@ vim.lsp.config('volar',
       init_options = {
         vue = {
           -- disable hybrid mode
-          hybridMode = false,
+          hybridMode = true,
         },
       },
     }
