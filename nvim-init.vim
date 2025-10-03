@@ -161,19 +161,29 @@ lua <<EOF
     local on_attach = vim.lsp.config('on_attach', {}) -- require("lspconfig").on_attach
     local capabilities = vim.lsp.config('capabilities', {}) -- require("lspconfig").capabilities
 
+    local loc = "/home/dave/.nvm/versions/node/v22.14.0/lib/node_modules/"
     -- local lspconfig = require "lspconfig"
 
-    vim.lsp.config( "ts_ls", { -- )
+    vim.lsp.config( "vtsls", { -- "vue_ls"
     -- lspconfig.ts_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
         init_options = {
             plugins = { -- I think this was my breakthrough that made it work
+            --[[ 
             {
-                    name = "@vue/typescript-plugin",
-                    location = "/usr/local/lib/node_modules/@vue/language-server",
-                    languages = { "vue" },
+                   name = "@vue/typescript-plugin",
+                   location =  "@vue/language-server",
+                   languages = { "vue" },
             },
+            --]]
+            ---[[  
+            {
+                   name = "@vue/typescript-plugin",
+                   location = loc .. "@vue/typescript-plugin",
+                   languages = { "vue" },
+            },
+            --]]
             },
         },
         filetypes = { "typescript", "javascript",  "vue", "css" },
@@ -182,10 +192,26 @@ lua <<EOF
 
     -- lspconfig.volar.setup {}
 
-    vim.lsp.config('volar', {})
+    -- vim.lsp.config('volar', {})
+        ---[[
+        vim.lsp.config('volar', 
+        -- lspconfig.volar.setup 
+        {
+                -- add filetypes for typescript, javascript and vue
+                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'vimscript', 'lua', 'css' },
+                init_options = {
+                    vue = {
+                        -- disable hybrid mode
+                        hybridMode = false,
+                    },
+                },
+            }
+        )
+        --]]
+
 
     -- if you just want default config for the servers then put them in a table
-    local servers = { "html", "css", "eslint", 'typescript', 'javascript', 'vue' }
+    local servers = { "html", "css", 'typescript', 'javascript', 'vue' }
 
     for _, lsp in ipairs(servers) do
         vim.lsp.config(lsp, { -- })
@@ -196,7 +222,7 @@ lua <<EOF
         )
         end
 
-        vim.lsp.config("clangd" , { -- })
+        vim.lsp.config("clangd" , { -- 
         -- lspconfig.clangd.setup {
             on_attach = on_attach,
             capabilities = capabilities,
@@ -232,22 +258,6 @@ lua <<EOF
             highlight = { enable = true }
             -- Other treesitter configurations
         }
-        ---[[
-        vim.lsp.config('volar', 
-        -- lspconfig.volar.setup 
-        {
-                -- add filetypes for typescript, javascript and vue
-                filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'vimscript', 'lua', 'css' },
-                init_options = {
-                    vue = {
-                        -- disable hybrid mode
-                        hybridMode = false,
-                    },
-                },
-            }
-        )
-        --]]
-
         -- you must remove ts_ls setup
         -- lspconfig.ts_ls.setup {}
 
