@@ -158,7 +158,7 @@ lua <<EOF
     -- require'lspconfig'.server.setup{}
     vim.lsp.config('server', {})
 
-    local on_attach = vim.lsp.config('on_attach', {}) -- require("lspconfig").on_attach
+    local on_attach = vim.lsp.config("on_attach", {}) -- require("lspconfig").on_attach
     local capabilities = vim.lsp.config('capabilities', {}) -- require("lspconfig").capabilities
 
     local loc = "/home/dave/.nvm/versions/node/v22.14.0/lib/node_modules/"
