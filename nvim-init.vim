@@ -158,13 +158,13 @@ lua <<EOF
     -- require'lspconfig'.server.setup{}
     vim.lsp.config('server', {})
 
-    local on_attach = vim.lsp.config("on_attach", {}) -- require("lspconfig").on_attach
-    local capabilities = vim.lsp.config('capabilities', {}) -- require("lspconfig").capabilities
+    local on_attach = vim.lsp.config["on_attach"] -- require("lspconfig").on_attach
+    local capabilities = vim.lsp.config['capabilities'] -- require("lspconfig").capabilities
 
     local loc = "/home/dave/.nvm/versions/node/v22.14.0/lib/node_modules/"
     -- local lspconfig = require "lspconfig"
 
-    vim.lsp.config( "vtsls", { -- "vue_ls"
+    vim.lsp.config( "vue_ls", { -- "vue_ls"
     -- lspconfig.ts_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
@@ -179,8 +179,8 @@ lua <<EOF
             --]]
             ---[[  
             {
-                   name = "@vue/typescript-plugin",
-                   location = loc .. "@vue/typescript-plugin",
+                   name = "@vue/language-server",
+                   location = loc .. "@vue/language-server",
                    languages = { "vue" },
             },
             --]]
@@ -211,7 +211,7 @@ lua <<EOF
 
 
     -- if you just want default config for the servers then put them in a table
-    local servers = { "html", "css", 'typescript', 'javascript', 'vue' }
+    local servers = { "html", "css", 'typescript', 'javascript', 'vue' , 'vue_ls'}
 
     for _, lsp in ipairs(servers) do
         vim.lsp.config(lsp, { -- })
