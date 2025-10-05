@@ -155,17 +155,14 @@ lua <<EOF
 
     ---[[ 
 
-    -- require'lspconfig'.server.setup{}
     vim.lsp.config('server', {})
 
     local on_attach = vim.lsp.config["on_attach"] -- require("lspconfig").on_attach
     local capabilities = vim.lsp.config['capabilities'] -- require("lspconfig").capabilities
 
     local loc = "/home/dave/.nvm/versions/node/v22.14.0/lib/node_modules/"
-    -- local lspconfig = require "lspconfig"
 
     vim.lsp.config( "vue_ls", { -- "vue_ls"
-    -- lspconfig.ts_ls.setup {
         on_attach = on_attach,
         capabilities = capabilities,
         init_options = {
@@ -190,12 +187,8 @@ lua <<EOF
     }
     )
 
-    -- lspconfig.volar.setup {}
-
-    -- vim.lsp.config('volar', {})
         ---[[
         vim.lsp.config('volar', 
-        -- lspconfig.volar.setup 
         {
                 -- add filetypes for typescript, javascript and vue
                 filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'vimscript', 'lua', 'css' },
@@ -215,7 +208,6 @@ lua <<EOF
 
     for _, lsp in ipairs(servers) do
         vim.lsp.config(lsp, { -- })
-        -- lspconfig[lsp].setup {
             on_attach = on_attach,
             capabilities = capabilities,
         }
@@ -223,7 +215,6 @@ lua <<EOF
         end
 
         vim.lsp.config("clangd" , { -- 
-        -- lspconfig.clangd.setup {
             on_attach = on_attach,
             capabilities = capabilities,
         }
@@ -233,7 +224,6 @@ lua <<EOF
         local navic = require("nvim-navic")
 
         vim.lsp.config( "clangd", 
-        -- require("lspconfig").clangd.setup 
         {
                 on_attach = function(client, bufnr)
                 navic.attach(client, bufnr)
@@ -250,9 +240,7 @@ lua <<EOF
             end,
         })
 
-        -- vim.lsp.config('lspconfig');
 
-        -- local lspconfig = require('lspconfig')
         require('nvim-treesitter.configs').setup {
             ensure_installed = { "vue", "javascript", "typescript", "css", "html", "lua" },
             highlight = { enable = true }

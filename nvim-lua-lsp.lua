@@ -152,7 +152,6 @@ local lsp_flags = {
 }
 
 vim.lsp.config( 'pyright', 
--- require('lspconfig')['pyright'].setup
 {
     on_attach = on_attach,
     flags = lsp_flags,
@@ -162,9 +161,12 @@ vim.lsp.config( 'pyright',
 --    on_attach = on_attach,
 --    flags = lsp_flags,
 -- }
+vim.lsp.config('tsserver', {
+    on_attach = on_attach,
+    flags = lsp_flags
+})
 
 
--- require('lspconfig')['rust_analyzer'].setup
 vim.lsp.config ( 'rust_analyzer',  
 {
     on_attach = on_attach,
@@ -247,7 +249,6 @@ vim.lsp.config ( 'rust_analyzer',
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
   vim.lsp.config( 'pyright',
-  -- require('lspconfig')['pyright'].setup 
   {
     capabilities = capabilities
   }
