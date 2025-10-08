@@ -43,7 +43,7 @@ chmod 600 ~/.ssh/*
 chmod 700 ~/.ssh/ 
 ```
 
-## For awesome:
+## For awesome or WM:
 ```bash
 $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfuse2 i3lock-fancy mpd mpc lxpolkit lxappearance
 
@@ -53,7 +53,7 @@ $ sudo apt install network-manager-applet
 ## for sway/wayland
 $ sudo apt install sway waybar
 $ sudo apt install pipx 
-$ sudo apt install sway-notification-center wtype  
+$ sudo apt install sway-notification-center wtype azote 
 ```
 
 Note: pulseaudio may need another plugin-type package.
