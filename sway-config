@@ -224,6 +224,8 @@ bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solari
 
 exec ~/.azotebg
 
+#exec waypaper --restore 
+
 #exec_always --no-startup-id /usr/bin/swaybg -i ~/Pictures/pexels-pixabay-531880.jpg  
 
 exec_always --no-startup-id lxpolkit 

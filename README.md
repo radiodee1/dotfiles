@@ -54,6 +54,7 @@ $ sudo apt install network-manager-applet
 $ sudo apt install sway waybar
 $ sudo apt install pipx 
 $ sudo apt install sway-notification-center wtype azote 
+$ pipx install waypaper
 ```
 
 Note: pulseaudio may need another plugin-type package.
