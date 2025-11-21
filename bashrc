@@ -93,6 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias gvim='nvim --listen /tmp/nvim.pipe'
 alias vim='nvim'
+alias pass='yazi ~/Documents/html_other/passwords'
 # alias zellij='zellij options --disable-mouse-mode'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -144,7 +145,7 @@ pass=~/Documents/html_other/passwords
 pas=~/Documents/html_other/passwords 
 passwords=~/Documents/html_other/passwords 
 
-
+export EDITOR=nvim
 
 eval "$(starship init bash)"
 
