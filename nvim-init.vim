@@ -104,9 +104,7 @@ call plug#end()
     set encoding=UTF-8
 
     " setlocal nowrap 
-    let b:did_ftplugin = 1
-
-
+    let b:did_ftplugin = 1 
 
     set mouse=a 
 
