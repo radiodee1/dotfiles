@@ -70,7 +70,7 @@ The neovim project can be found on line here. At the time of this writing the Ub
 https://github.com/neovim/neovim
 ```
 
-On Ubuntu snaps can make installing nvim very easy. Use this command.
+On Ubuntu snaps can make installing nvim very easy. Use this command. (You may have to use the `--classic` flag with the `snap` installation.)
 
 ```bash
 ## from snap ##
