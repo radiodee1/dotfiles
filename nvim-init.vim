@@ -161,7 +161,7 @@ lua <<EOF
     ---[[ 
 
     vim.lsp.config('server', {})
-
+    --[[ 
     local on_attach = vim.lsp.config["on_attach"] -- require("lspconfig").on_attach
     local capabilities = vim.lsp.config['capabilities'] -- require("lspconfig").capabilities
 
@@ -172,26 +172,17 @@ lua <<EOF
         capabilities = capabilities,
         init_options = {
             plugins = { -- I think this was my breakthrough that made it work
-            --[[ 
-            {
-                   name = "@vue/typescript-plugin",
-                   location =  "@vue/language-server",
-                   languages = { "vue" },
-            },
-            --]]
-            ---[[  
             {
                    name = "@vue/language-server",
                    location = loc .. "@vue/language-server",
                    languages = { "vue" },
             },
-            --]]
             },
         },
         filetypes = { "typescript", "javascript",  "vue", "css" },
     }
     )
-
+    --]] 
         ---[[
         vim.lsp.config('volar', 
         {
@@ -256,8 +247,6 @@ lua <<EOF
             -- ensure_installed = { "vue", "javascript", "typescript", "css", "html" },
             -- highlight = { enable = true }
         -- }
-        -- you must remove ts_ls setup
-        -- lspconfig.ts_ls.setup {}
 
         vim.keymap.set({ "n" }, "<leader>fl",
         function()

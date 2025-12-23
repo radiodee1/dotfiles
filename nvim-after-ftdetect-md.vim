@@ -1,8 +1,9 @@
-au BufRead,BufNewFile *.py		set filetype=python 
+au BufRead,BufNewFile *.md		set filetype=markdown 
 
-au BufNewFile,BufRead *.py setlocal nowrap 
+au BufNewFile,BufRead *.md setlocal nowrap 
 
-au BufNewFile,BufRead *.py colorscheme dracula
+au BufNewFile,BufRead *.md colorscheme monokai_pro "  :lua vim.api.nvim_set_hl(0, 'markdownError', { bg = "#808080" })
+
 
 
 nnoremap j gj
