@@ -89,7 +89,11 @@ call plug#end()
 
     "highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
 
-    colorscheme monokai_pro
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+
+    colorscheme vim  " monokai_pro
 
 
     " let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
@@ -113,7 +117,7 @@ call plug#end()
     endif
 
     let g:airline#extensions#tabline#enabled=1
-    let g:airline_theme='atomic'  " 'dracula'  'dracula'   'badwolf'
+    let g:airline_theme='solarized' "'atomic' 'luna' 'barbecue'  'dracula'   'badwolf'
     " let g:airline_powerline_fonts = 1 
     let g:airline#extensions#tabline#formatter ='short_path' "'unique_tail'
     """"""""""""""""""""""""""""""""""""""""
