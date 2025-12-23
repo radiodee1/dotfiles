@@ -49,6 +49,7 @@ $ sudo apt install compton nitrogen xcape xdotool ripgrep rofi pulseaudio libfus
 
 ## for all WM 
 $ sudo apt install network-manager-applet
+$ sudo snap install yazi
 
 ## for sway/wayland
 $ sudo apt install sway waybar
