@@ -120,6 +120,7 @@ call plug#end()
     let g:airline#extensions#tabline#formatter ='short_path' "'unique_tail'
 
     :lua vim.api.nvim_set_hl(0, 'LineNr', { fg = "#808080" })
+
     """"""""""""""""""""""""""""""""""""""""
     "" keymaps
     """"""""""""""""""""""""""""""""""""""""
@@ -282,10 +283,17 @@ lua <<EOF
         -- for follow-md-links
         vim.keymap.set('n', '<bs>', ':edit #<cr>', { silent = true })
 
+        require('render-markdown').setup({
+            completions = { lsp = { enabled = true } },
+        })
+
 EOF
 
         set completeopt=menu,menuone,noselect
 
+        :lua vim.api.nvim_set_hl(0, 'markdownCodeBlock', { bg = "#808080" })
+
+        :lua vim.api.nvim_set_hl(0, 'markdownError', { bg = "#808080" })
 
         highlight Normal guibg=none
         highlight NonText guibg=none
