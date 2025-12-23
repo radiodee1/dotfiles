@@ -98,7 +98,7 @@ call plug#end()
 
     " let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-python']  " list of CoC extensions needed
 
-
+    " what does this do???
     inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
 
     set encoding=UTF-8
@@ -118,6 +118,8 @@ call plug#end()
     let g:airline_theme='solarized' "'atomic' 'luna' 'barbecue'  'dracula'   'badwolf'
     " let g:airline_powerline_fonts = 1 
     let g:airline#extensions#tabline#formatter ='short_path' "'unique_tail'
+
+    :lua vim.api.nvim_set_hl(0, 'LineNr', { fg = "#808080" })
     """"""""""""""""""""""""""""""""""""""""
     "" keymaps
     """"""""""""""""""""""""""""""""""""""""
