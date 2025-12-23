@@ -240,12 +240,17 @@ lua <<EOF
             end,
         })
 
-
-        require('nvim-treesitter.configs').setup {
-            ensure_installed = { "vue", "javascript", "typescript", "css", "html", "lua" },
-            highlight = { enable = true }
-            -- Other treesitter configurations
+        require'nvim-treesitter'.setup {
+            -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+            install_dir = vim.fn.stdpath('data') .. '/site'
         }
+
+        -- require'nvim-treesitter'.install { 'python', 'javascript' }
+
+        -- require('nvim-treesitter.configs').setup {
+            -- ensure_installed = { "vue", "javascript", "typescript", "css", "html" },
+            -- highlight = { enable = true }
+        -- }
         -- you must remove ts_ls setup
         -- lspconfig.ts_ls.setup {}
 
