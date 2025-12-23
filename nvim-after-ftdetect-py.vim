@@ -2,6 +2,7 @@ au BufRead,BufNewFile *.py		set filetype=python
 
 au BufNewFile,BufRead *.py setlocal nowrap 
 
+" au BufNewFile,BufRead *.py :lua vim.treesitter.start() 
 
 
 nnoremap j gj
