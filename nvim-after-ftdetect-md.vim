@@ -2,6 +2,14 @@ au BufRead,BufNewFile *.md		set filetype=markdown
 
 au BufNewFile,BufRead *.md setlocal nowrap 
 
+lua <<EOF 
+
+    local my_colors = vim.g.colors_name or 'default'
+
+    print(my_colors .. ' my_colors - type ":messages" to see this')
+
+EOF
+
 au BufEnter *.md colorscheme monokai_pro "  :lua vim.api.nvim_set_hl(0, 'markdownError', { bg = "#808080" })
 
 au BufLeave *.md colorscheme vim 
