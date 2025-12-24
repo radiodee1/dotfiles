@@ -4,9 +4,9 @@ au BufNewFile,BufRead *.md setlocal nowrap
 
 lua <<EOF 
 
-    local my_colors = vim.g.colors_name or 'default'
+    local my_colors = vim.api.nvim_exec2('colorscheme', { output = true }) or 'default'
 
-    print(my_colors .. ' my_colors - type ":messages" to see this')
+    print(my_colors.output .. ' my_colors - type ":messages" to see this')
 
 EOF
 
