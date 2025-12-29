@@ -218,7 +218,7 @@ assign [app_id="chrome"] workspace $ws2
 
 assign [app_id="org.gnome.Nautilus"] workspace $ws5  
 
-bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi -icon-theme 'Papirus' -show-icons" 
+bindsym --release Super_L   exec "rofi -combi-modi window,drun,ssh,run -theme solarized -font 'hack 10' -show combi -icon-theme 'Papirus' -show-icons" 
 
 #exec_always --no-startup-id /usr/bin/swaybg -i ~/Pictures/hand-painted-watercolor-pastel-sky-background_23-2148902771.avif
 
