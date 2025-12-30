@@ -1,0 +1,6 @@
+
+[Desktop Entry]
+Name=Sway (Unsupported GPU)
+Comment=Sway with --unsupported-gpu flag
+Exec=sway --unsupported-gpu
+Type=Application
