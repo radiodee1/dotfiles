@@ -1,6 +1,6 @@
 au BufRead,BufNewFile *.md		set filetype=markdown 
 
-au BufNewFile,BufRead *.md setlocal nowrap 
+au BufNewFile,BufRead *.md setlocal wrap 
 
 lua <<EOF 
 
