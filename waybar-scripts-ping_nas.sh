@@ -11,8 +11,9 @@ fi
 read -r ip < "$FILE"
 HOST=$ip 
 
-# Ping the host once with a 1-second timeout and suppress output
-if ping -c 4  $HOST &>/dev/null; then
+ping -c 4  $HOST &>/dev/null
+
+if [ $? -eq 0 ]; then
     echo "up"
 else
     echo "down"
