@@ -19,6 +19,7 @@
     - ~/.config/mpd/
     - ~/.config/sway
     - ~/.config/waybar
+    - ~/.config/waybar/scripts
 
 - link:
     ~/.vimrc: vimrc
@@ -60,6 +61,8 @@
     ~/.config/sway/config: sway-config
     ~/.config/waybar/config: waybar-config
     ~/.config/waybar/style.css: waybar-style.css
+    ~/.config/waybar/scripts/ping_nas.sh: waybar-scripts-ping_nas.sh 
+    ~/.config/waybar/scripts/nas_ip.txt: waybar-scripts-nas_ip.txt
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
