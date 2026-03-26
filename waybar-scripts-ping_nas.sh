@@ -14,6 +14,19 @@ HOST=$ip
 ping -c 4  $HOST &>/dev/null
 
 if [ $? -eq 0 ]; then
+
+    
+    DISK1=$(snmpwalk -v 2c -c public $HOST .1.3.6.1.4.1.44738.5.1.1.4)
+    str=$DISK1
+    temp="${str#*\"}"  # Remove everything before the first "
+    result1="${temp%\"*}" # Remove everything after the last "
+    #echo $result1
+
+    if [ "$result1" = "degraded" ]; then
+        echo $result1
+        exit
+    fi 
+
     DISK1=$(snmpwalk -v 2c -c public $HOST .1.3.6.1.4.1.44738.4.1.1.5.1)
 
     str=$DISK1
@@ -49,5 +62,4 @@ if [ $? -eq 0 ]; then
 else
     echo "down"
 fi
-
 
