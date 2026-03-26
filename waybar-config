@@ -1,32 +1,6 @@
 // -*- mode: jsonc -*-
 
-//{
-//    "layer": "top",
-//    "modules-left": ["sway/workspaces", "sway/mode"],
-//    "modules-center": ["sway/window"],
-//    "modules-right": ["battery", "clock"],
-//    "sway/window": {
-//        "max-length": 50
-//    },
-//    "battery": {
-//        "format": "{capacity}% {icon}",
-//        "format-icons": ["", "", "", "", ""]
-//    },
-//    "clock": {
-//        "format-alt": "{:%a, %d. %b  %H:%M}"
-//    },
-//    "sway/workspaces": { // wait for trixie
-//	"persistent-workspaces": {
-//        "1": [],
-//        "2": [],
-//		"3": [],  
-//		"4": [],  
-//		"5": []  
-//	}
-//}
-//}
 
-// -*- mode: json -*-
 
 {
 	"layer": "top",
@@ -48,6 +22,9 @@
 		"custom/right-arrow-dark"
 	],
 	"modules-right": [
+        "custom/left-arrow-dark",
+        "custom/mynas",
+        "custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
@@ -148,16 +125,22 @@
 		"icon-size": 20,
         "spacing": 20
 	}
-,
+    
+    ,
     "sway/workspaces": { // wait for trixie
-	"persistent-workspaces": {
-        "1": [],
-        "2": [],
-		"3": [],  
-		"4": [],  
-		"5": []  
-	}
-}
+	    "persistent-workspaces": {
+            "1": [],
+            "2": [],
+		    "3": [],  
+		    "4": [],  
+		    "5": [],  
+	    }
+    },
+    "custom/mynas": {
+        "format": "Nas {}",
+        "exec": "~/.config/waybar/scripts/ping_nas.sh",
+        "interval": 30 ,
+    },
 
 
 }
