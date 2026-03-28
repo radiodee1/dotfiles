@@ -16,8 +16,9 @@ export default class CommandToPanelExtension extends Extension {
         this._indicator.add_child(this._label);
         Main.panel.addToStatusArea(this.metadata.uuid, this._indicator);
 
+        this._homedir = GLib.get_home_dir() + '/.local/share/gnome-shell/extensions/text-to-bar@dliebman.com/';
         // Command to run (e.g., get date)
-        this._command = ['date', '+%H:%M:%S'];
+        this._command = [ this._homedir + '/script.sh'];
         
         // Start the timer
         this._timeoutId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 30, () => {
