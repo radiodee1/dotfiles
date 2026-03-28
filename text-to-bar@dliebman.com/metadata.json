@@ -1,0 +1,8 @@
+
+{
+  "name": "Text to Bar",
+  "description": "Prints command output to top bar",
+  "uuid": "text-to-bar@dliebman.com",
+  "shell-version": [ "48"], 
+  "url": ""
+}
