@@ -25,7 +25,7 @@ export default class CommandToBarExtension extends Extension {
 
     _updateLabel() {
         // --- CHANGE YOUR COMMAND HERE ---
-        let command = 'YOUR_COMMAND_HERE';
+        let command = 'date +%H:%M';  //'YOUR_COMMAND_HERE';
         
         try {
             let [res, out, err, status] = GLib.spawn_command_line_sync(command);
