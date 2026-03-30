@@ -21,7 +21,7 @@ snmp_info () {
     if [ $length -gt 10 ]; then
         result1='check'
     fi
-    echo "NAS: $result1"
+    echo "$result1"
     return 0
 }
 
