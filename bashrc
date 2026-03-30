@@ -94,6 +94,7 @@ alias l='ls -CF'
 alias gvim='nvim --listen /tmp/nvim.pipe'
 alias vim='nvim'
 alias pass='yazi ~/Documents/html_other/passwords'
+alias nv='NVIM_APPNAME="nvim-lazy" nvim'
 # alias zellij='zellij options --disable-mouse-mode'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -71,5 +71,5 @@
   - [echo "install xdotool for awesome-wm-logout.desktop"]
   - [cd ~/.config/awesome/ && git clone https://github.com/streetturtle/awesome-wm-widgets.git ]
   - [cp nvim-md.css ~/$(cat nvim-vault.txt)/md.css ]
-  - [cp nvim-lazy ~/.config/nvim-lazy ]
+  - [cp -r nvim-lazy ~/.config/. ]
   - [ bash sway-nogpu.sh ]
