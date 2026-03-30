@@ -3,7 +3,6 @@
 -- Add any additional keymaps here
 --
 
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -14,7 +13,7 @@ local keymap = vim.api.nvim_set_keymap
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -42,11 +41,11 @@ keymap("n", "<S-Right>", ":bnext<CR>", opts)
 keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 
 keymap("i", "<S-Right>", "<Esc>:bprevious<CR>i", opts)
-keymap("i", "<S-Left>",  "<Esc>:bnext<CR>i", opts)
+keymap("i", "<S-Left>", "<Esc>:bnext<CR>i", opts)
 
 -- inoremap <C>, <Esc>:bprevious<CR>i
 -- inoremap <C>. <Esc>:bnext<CR>i
- 
+
 keymap("n", "<C-tab>", ":bnext<CR>", opts)
 keymap("n", "<C-S-tab>", ":bprevious<CR>", opts)
 
@@ -86,5 +85,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("c", "<Down>", "<C-n>", opts)
 -- keymap("c", "<Up>", "<C-p>", opts)
 
--- Control-"/" : use this to start path completion -- 
+-- Control-"/" : use this to start path completion --
 -- keymap("i", "<C-_>", "<C-x><C-f>", opts)

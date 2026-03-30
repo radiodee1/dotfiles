@@ -1,0 +1,11 @@
+-- In your configuration file (e.g., lua/plugins/noice.lua)
+return {
+  "folke/noice.nvim",
+  opts = {
+    -- other noice options...
+    cmdline = {
+      view = "cmdline", -- This forces the classic command line at the bottom
+    },
+    -- ...
+  },
+}
