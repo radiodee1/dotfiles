@@ -74,6 +74,13 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+-- lua/config/keymaps.lua
+
+-- Map <leader>fg to live_grep
+keymap("n", "<leader>fg", "<leader>sg", { desc = "Grep (Telescope)" })
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
