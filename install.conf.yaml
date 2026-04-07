@@ -21,6 +21,7 @@
     - ~/.config/waybar
     - ~/.config/waybar/scripts
     - ~/.config/zellij
+    - ~/.config/zellij/layouts
 
 - link:
     ~/.vimrc: vimrc
@@ -65,6 +66,8 @@
     ~/.config/waybar/scripts/ping_nas.sh: waybar-scripts-ping_nas.sh 
     ~/.config/waybar/scripts/nas_ip.txt: waybar-scripts-nas_ip.txt
     ~/.config/zellij/config.kdl: zellij-config.kdl
+    ~/.config/zellij/layouts/default.kdl: zellij-layouts-default.kdl 
+    ~/.config/zellij/layouts/default.kdl.old: zellij-layouts-default.kdl.old 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
