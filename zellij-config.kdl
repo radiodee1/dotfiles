@@ -3,7 +3,7 @@
 //
 
 //theme "blade-runner"
-//theme "gruvbox-dark"
+theme "gruvbox-dark"
 
 keybinds clear-defaults=true {
     locked {
