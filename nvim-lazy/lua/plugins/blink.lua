@@ -11,6 +11,8 @@ return {
       -- list = {
       --  selection = { preselect = false, auto_insert = false },
       -- },
+      -- I don't know if this works
+      --
     },
     cmdline = {
       enabled = true,
