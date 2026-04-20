@@ -69,6 +69,8 @@
     ~/.config/zellij/layouts/default.kdl: zellij-layouts-default.kdl 
     ~/.config/zellij/layouts/default.kdl.old: zellij-layouts-default.kdl.old 
     ~/.config/starship.toml: starship.toml 
+    ~/.config/kitty/kitty.conf: kitty-kitty.conf 
+    ~/.config/kitty/current-theme.conf: kitty-current-theme.conf 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
