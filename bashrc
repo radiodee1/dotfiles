@@ -160,5 +160,3 @@ if [ -d ~/go/bin ]; then
   export PATH=$HOME/go/bin/:$PATH
 fi
 
-export PATH="$PATH:~/.junest/usr/bin_wrappers"
-export PATH=~/.local/share/junest/bin:$PATH
