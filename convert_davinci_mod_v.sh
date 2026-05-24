@@ -10,7 +10,7 @@ fi
 # Using "$@" preserves arguments with spaces
 for arg in "$@"; do
   echo "Processing: $arg"
-  ffmpeg -i "${arg}" -c:v prores_ks -profile:v 2 -c:a copy "${arg}.conv_v.mov"
+  ffmpeg -i "${arg}" -c:v prores_ks -profile:v 2 -c:a copy "${arg%.*}.conv_v.mov"
 
 done
 
