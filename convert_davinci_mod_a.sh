@@ -13,5 +13,3 @@ for arg in "$@"; do
   ffmpeg -i "${arg}" -c:v copy -c:a pcm_s16le -ar 44100 -ac 2 "${arg%.*}.conv_a.mov"
 
 done
-
-#ffmpeg -i input.mp4 -c:v prores_ks -profile:v 2 -c:a pcm_s16le -ar 44100 -ac 2 output.mov
