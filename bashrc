@@ -161,3 +161,5 @@ export NVM_DIR="$HOME/.nvm"
 if [ -d ~/go/bin ]; then
   export PATH=$HOME/go/bin/:$PATH
 fi
+
+source /usr/share/nvm/init-nvm.sh
