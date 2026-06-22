@@ -163,3 +163,7 @@ if [ -d ~/go/bin ]; then
 fi
 
 source /usr/share/nvm/init-nvm.sh
+
+export OLLAMA_MODELS="/mnt/tera/ollama/models"
+
+export SYSTEMD_EDITOR="nvim"
