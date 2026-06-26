@@ -139,7 +139,7 @@ fi
 
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
-export TERMINAL='x-terminal-emulator'
+export TERMINAL='kitty'
 export SWAYSOCK=$(lsof /run/user/1000/sway-ipc.* 2>/dev/null | awk '{print $9}' | tail -n +2 | sort | uniq)
 
 shopt -s cdable_vars
@@ -167,3 +167,7 @@ source /usr/share/nvm/init-nvm.sh
 export OLLAMA_MODELS="/mnt/tera/ollama/models"
 
 export SYSTEMD_EDITOR="nvim"
+
+if [ "$TERM" = "xterm-kitty" ] && [ -z "$ZELLIJ" ]; then
+  eval "$(zellij setup --generate-auto-start bash)"
+fi
