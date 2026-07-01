@@ -162,7 +162,9 @@ if [ -d ~/go/bin ]; then
   export PATH=$HOME/go/bin/:$PATH
 fi
 
-source /usr/share/nvm/init-nvm.sh
+if [ -f /usr/share/nvm/init-nvm.sh ]; then
+  source /usr/share/nvm/init-nvm.sh
+fi
 
 export OLLAMA_MODELS="/mnt/tera/ollama/models"
 
